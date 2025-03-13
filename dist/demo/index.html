@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/css-absolute-chroma/main.css" />
+  </head>
+  <body>
+    <div class="s-section">
+      <div class="s-container">
+        <h2>Relative chroma palette</h2>
+        <p class="u-mb-10">
+          The palette's swatches are made with the new notation: oklch(colorspace L RC H), where RC is a relative chroma. You can
+          see that we got nice results compared to next example wit ha fixed absolute chroma value for all swatches.
+        </p>
+        <div id="js-relativeChromaWrapper"></div>
+      </div>
+
+      <div class="s-container">
+        <h2>Absolute chroma palette</h2>
+        <p class="u-mb-10">
+          Here, we use the same absolute chroma value for all swatches. You can see that for some colors, because of the browser
+          clamping method, we got hue and lightness shifts.
+        </p>
+        <div id="js-absoluteChromaWrapper"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const COLOR_NAMES = ['red', 'orange', 'amber', 'yellow', 'lime', 'teal', 'cyan', 'sky', 'blue', 'purple', 'fuchsia', 'pink']
+
+  const LIGHTNESS_STEPS = 10
+  const LIGHTNESS_MIN_VALUE = 5
+  const LIGHTNESS_MAX_VALUE = 95
+
+  const generateColorPalettes = (paletteChromaType) => {
+    // Create the container
+    const container = document.createElement('div')
+    container.className = 'c-color-swatches-container'
+
+    let lightnessCurrentValue = LIGHTNESS_MIN_VALUE
+
+    // Calculate the lightness values
+    let lightnessValues = []
+    for (let lightness = LIGHTNESS_MIN_VALUE; lightness <= LIGHTNESS_MAX_VALUE; lightness += LIGHTNESS_STEPS) {
+      lightnessValues.push(lightness)
+    }
+
+    // Create a row for each color
+    COLOR_NAMES.forEach((color) => {
+      const row = document.createElement('div')
+      row.className = 'c-color-swatches-row'
+
+      // Create swatches for each lightness value
+      lightnessValues.forEach((lightness) => {
+        const swatch = document.createElement('div')
+        swatch.className = `c-color-swatch c-color-swatch--${paletteChromaType}-${color}${lightness}`
+        row.appendChild(swatch)
+      })
+
+      container.appendChild(row)
+    })
+
+    return container
+  }
+
+  const relativeChromaPalettes = generateColorPalettes('rc')
+  const absoluteChromaPalettes = generateColorPalettes('ac')
+
+  document.getElementById('js-relativeChromaWrapper').appendChild(relativeChromaPalettes)
+  document.getElementById('js-absoluteChromaWrapper').appendChild(absoluteChromaPalettes)
+</script>

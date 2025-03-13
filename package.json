@@ -3,12 +3,18 @@
   "version": "0.1",
   "author": "Doko Zero",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "eslint-checks": "pnpm exec eslint \"./src/**/*\"",
     "type-checks": "tsc --noEmit",
-    "all-checks": "pnpm eslint-checks & pnpm type-checks",
-    "watch": "pnpm exec tsc --watch",
-    "build": "pnpm exec tsc"
+    "all-checks": "pnpm eslint-checks && pnpm type-checks",
+    "sass-build": "sass --no-source-map ./src/demo/css/sass/main.scss ./src/demo/css/css-relative-chroma/main.css",
+    "postcss-build": "pnpm exec postcss ./src/demo/css/css-relative-chroma/main.css -o ./src/demo/css/css-absolute-chroma/main.css",
+    "all-css-build": "pnpm sass-build && pnpm postcss-build",
+    "all-css-watch": "nodemon --watch ./src/demo/css/sass/ --ext scss --exec pnpm all-css-build",
+    "tsc-watch": "pnpm exec tsc --watch",
+    "tsc-build": "pnpm exec tsc",
+    "build": "./build.zsh"
   },
   "dependencies": {
     "culori": "^4.0.1"
@@ -19,7 +25,11 @@
     "@typescript-eslint/parser": "^8.26.1",
     "eslint": "^9.22.0",
     "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3",
+    "sass": "^1.85.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1"
   }

@@ -1,0 +1,27 @@
+$color-names: (
+  10: 'red',
+  40: 'orange',
+  70: 'amber',
+  100: 'yellow',
+  130: 'lime',
+  160: 'teal',
+  190: 'cyan',
+  220: 'sky',
+  250: 'blue',
+  280: 'purple',
+  310: 'fuchsia',
+  340: 'pink'
+);
+
+$color-space: 'display-p3';
+
+$lightness-steps: 10;
+$lightness-min-value: 5;
+$lightness-max-value: 95;
+
+$relative-chroma: 100;
+$absolute-chroma: 0.37;
+$absolute-chroma-string: '0-37';
+
+$hue-steps: 30;
+$hue-start-value: 10;

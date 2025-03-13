@@ -1,0 +1,1260 @@
+:root {
+  --b__color__red__rc100__5: oklch(display-p3 5% 100% 10);
+  --b__color__red__rc100__15: oklch(display-p3 15% 100% 10);
+  --b__color__red__rc100__25: oklch(display-p3 25% 100% 10);
+  --b__color__red__rc100__35: oklch(display-p3 35% 100% 10);
+  --b__color__red__rc100__45: oklch(display-p3 45% 100% 10);
+  --b__color__red__rc100__55: oklch(display-p3 55% 100% 10);
+  --b__color__red__rc100__65: oklch(display-p3 65% 100% 10);
+  --b__color__red__rc100__75: oklch(display-p3 75% 100% 10);
+  --b__color__red__rc100__85: oklch(display-p3 85% 100% 10);
+  --b__color__red__rc100__95: oklch(display-p3 95% 100% 10);
+  --b__color__orange__rc100__5: oklch(display-p3 5% 100% 40);
+  --b__color__orange__rc100__15: oklch(display-p3 15% 100% 40);
+  --b__color__orange__rc100__25: oklch(display-p3 25% 100% 40);
+  --b__color__orange__rc100__35: oklch(display-p3 35% 100% 40);
+  --b__color__orange__rc100__45: oklch(display-p3 45% 100% 40);
+  --b__color__orange__rc100__55: oklch(display-p3 55% 100% 40);
+  --b__color__orange__rc100__65: oklch(display-p3 65% 100% 40);
+  --b__color__orange__rc100__75: oklch(display-p3 75% 100% 40);
+  --b__color__orange__rc100__85: oklch(display-p3 85% 100% 40);
+  --b__color__orange__rc100__95: oklch(display-p3 95% 100% 40);
+  --b__color__amber__rc100__5: oklch(display-p3 5% 100% 70);
+  --b__color__amber__rc100__15: oklch(display-p3 15% 100% 70);
+  --b__color__amber__rc100__25: oklch(display-p3 25% 100% 70);
+  --b__color__amber__rc100__35: oklch(display-p3 35% 100% 70);
+  --b__color__amber__rc100__45: oklch(display-p3 45% 100% 70);
+  --b__color__amber__rc100__55: oklch(display-p3 55% 100% 70);
+  --b__color__amber__rc100__65: oklch(display-p3 65% 100% 70);
+  --b__color__amber__rc100__75: oklch(display-p3 75% 100% 70);
+  --b__color__amber__rc100__85: oklch(display-p3 85% 100% 70);
+  --b__color__amber__rc100__95: oklch(display-p3 95% 100% 70);
+  --b__color__yellow__rc100__5: oklch(display-p3 5% 100% 100);
+  --b__color__yellow__rc100__15: oklch(display-p3 15% 100% 100);
+  --b__color__yellow__rc100__25: oklch(display-p3 25% 100% 100);
+  --b__color__yellow__rc100__35: oklch(display-p3 35% 100% 100);
+  --b__color__yellow__rc100__45: oklch(display-p3 45% 100% 100);
+  --b__color__yellow__rc100__55: oklch(display-p3 55% 100% 100);
+  --b__color__yellow__rc100__65: oklch(display-p3 65% 100% 100);
+  --b__color__yellow__rc100__75: oklch(display-p3 75% 100% 100);
+  --b__color__yellow__rc100__85: oklch(display-p3 85% 100% 100);
+  --b__color__yellow__rc100__95: oklch(display-p3 95% 100% 100);
+  --b__color__lime__rc100__5: oklch(display-p3 5% 100% 130);
+  --b__color__lime__rc100__15: oklch(display-p3 15% 100% 130);
+  --b__color__lime__rc100__25: oklch(display-p3 25% 100% 130);
+  --b__color__lime__rc100__35: oklch(display-p3 35% 100% 130);
+  --b__color__lime__rc100__45: oklch(display-p3 45% 100% 130);
+  --b__color__lime__rc100__55: oklch(display-p3 55% 100% 130);
+  --b__color__lime__rc100__65: oklch(display-p3 65% 100% 130);
+  --b__color__lime__rc100__75: oklch(display-p3 75% 100% 130);
+  --b__color__lime__rc100__85: oklch(display-p3 85% 100% 130);
+  --b__color__lime__rc100__95: oklch(display-p3 95% 100% 130);
+  --b__color__teal__rc100__5: oklch(display-p3 5% 100% 160);
+  --b__color__teal__rc100__15: oklch(display-p3 15% 100% 160);
+  --b__color__teal__rc100__25: oklch(display-p3 25% 100% 160);
+  --b__color__teal__rc100__35: oklch(display-p3 35% 100% 160);
+  --b__color__teal__rc100__45: oklch(display-p3 45% 100% 160);
+  --b__color__teal__rc100__55: oklch(display-p3 55% 100% 160);
+  --b__color__teal__rc100__65: oklch(display-p3 65% 100% 160);
+  --b__color__teal__rc100__75: oklch(display-p3 75% 100% 160);
+  --b__color__teal__rc100__85: oklch(display-p3 85% 100% 160);
+  --b__color__teal__rc100__95: oklch(display-p3 95% 100% 160);
+  --b__color__cyan__rc100__5: oklch(display-p3 5% 100% 190);
+  --b__color__cyan__rc100__15: oklch(display-p3 15% 100% 190);
+  --b__color__cyan__rc100__25: oklch(display-p3 25% 100% 190);
+  --b__color__cyan__rc100__35: oklch(display-p3 35% 100% 190);
+  --b__color__cyan__rc100__45: oklch(display-p3 45% 100% 190);
+  --b__color__cyan__rc100__55: oklch(display-p3 55% 100% 190);
+  --b__color__cyan__rc100__65: oklch(display-p3 65% 100% 190);
+  --b__color__cyan__rc100__75: oklch(display-p3 75% 100% 190);
+  --b__color__cyan__rc100__85: oklch(display-p3 85% 100% 190);
+  --b__color__cyan__rc100__95: oklch(display-p3 95% 100% 190);
+  --b__color__sky__rc100__5: oklch(display-p3 5% 100% 220);
+  --b__color__sky__rc100__15: oklch(display-p3 15% 100% 220);
+  --b__color__sky__rc100__25: oklch(display-p3 25% 100% 220);
+  --b__color__sky__rc100__35: oklch(display-p3 35% 100% 220);
+  --b__color__sky__rc100__45: oklch(display-p3 45% 100% 220);
+  --b__color__sky__rc100__55: oklch(display-p3 55% 100% 220);
+  --b__color__sky__rc100__65: oklch(display-p3 65% 100% 220);
+  --b__color__sky__rc100__75: oklch(display-p3 75% 100% 220);
+  --b__color__sky__rc100__85: oklch(display-p3 85% 100% 220);
+  --b__color__sky__rc100__95: oklch(display-p3 95% 100% 220);
+  --b__color__blue__rc100__5: oklch(display-p3 5% 100% 250);
+  --b__color__blue__rc100__15: oklch(display-p3 15% 100% 250);
+  --b__color__blue__rc100__25: oklch(display-p3 25% 100% 250);
+  --b__color__blue__rc100__35: oklch(display-p3 35% 100% 250);
+  --b__color__blue__rc100__45: oklch(display-p3 45% 100% 250);
+  --b__color__blue__rc100__55: oklch(display-p3 55% 100% 250);
+  --b__color__blue__rc100__65: oklch(display-p3 65% 100% 250);
+  --b__color__blue__rc100__75: oklch(display-p3 75% 100% 250);
+  --b__color__blue__rc100__85: oklch(display-p3 85% 100% 250);
+  --b__color__blue__rc100__95: oklch(display-p3 95% 100% 250);
+  --b__color__purple__rc100__5: oklch(display-p3 5% 100% 280);
+  --b__color__purple__rc100__15: oklch(display-p3 15% 100% 280);
+  --b__color__purple__rc100__25: oklch(display-p3 25% 100% 280);
+  --b__color__purple__rc100__35: oklch(display-p3 35% 100% 280);
+  --b__color__purple__rc100__45: oklch(display-p3 45% 100% 280);
+  --b__color__purple__rc100__55: oklch(display-p3 55% 100% 280);
+  --b__color__purple__rc100__65: oklch(display-p3 65% 100% 280);
+  --b__color__purple__rc100__75: oklch(display-p3 75% 100% 280);
+  --b__color__purple__rc100__85: oklch(display-p3 85% 100% 280);
+  --b__color__purple__rc100__95: oklch(display-p3 95% 100% 280);
+  --b__color__fuchsia__rc100__5: oklch(display-p3 5% 100% 310);
+  --b__color__fuchsia__rc100__15: oklch(display-p3 15% 100% 310);
+  --b__color__fuchsia__rc100__25: oklch(display-p3 25% 100% 310);
+  --b__color__fuchsia__rc100__35: oklch(display-p3 35% 100% 310);
+  --b__color__fuchsia__rc100__45: oklch(display-p3 45% 100% 310);
+  --b__color__fuchsia__rc100__55: oklch(display-p3 55% 100% 310);
+  --b__color__fuchsia__rc100__65: oklch(display-p3 65% 100% 310);
+  --b__color__fuchsia__rc100__75: oklch(display-p3 75% 100% 310);
+  --b__color__fuchsia__rc100__85: oklch(display-p3 85% 100% 310);
+  --b__color__fuchsia__rc100__95: oklch(display-p3 95% 100% 310);
+  --b__color__pink__rc100__5: oklch(display-p3 5% 100% 340);
+  --b__color__pink__rc100__15: oklch(display-p3 15% 100% 340);
+  --b__color__pink__rc100__25: oklch(display-p3 25% 100% 340);
+  --b__color__pink__rc100__35: oklch(display-p3 35% 100% 340);
+  --b__color__pink__rc100__45: oklch(display-p3 45% 100% 340);
+  --b__color__pink__rc100__55: oklch(display-p3 55% 100% 340);
+  --b__color__pink__rc100__65: oklch(display-p3 65% 100% 340);
+  --b__color__pink__rc100__75: oklch(display-p3 75% 100% 340);
+  --b__color__pink__rc100__85: oklch(display-p3 85% 100% 340);
+  --b__color__pink__rc100__95: oklch(display-p3 95% 100% 340);
+  --b__color__red__ac0-37__5: oklch(5% 0.37 10);
+  --b__color__red__ac0-37__15: oklch(15% 0.37 10);
+  --b__color__red__ac0-37__25: oklch(25% 0.37 10);
+  --b__color__red__ac0-37__35: oklch(35% 0.37 10);
+  --b__color__red__ac0-37__45: oklch(45% 0.37 10);
+  --b__color__red__ac0-37__55: oklch(55% 0.37 10);
+  --b__color__red__ac0-37__65: oklch(65% 0.37 10);
+  --b__color__red__ac0-37__75: oklch(75% 0.37 10);
+  --b__color__red__ac0-37__85: oklch(85% 0.37 10);
+  --b__color__red__ac0-37__95: oklch(95% 0.37 10);
+  --b__color__orange__ac0-37__5: oklch(5% 0.37 40);
+  --b__color__orange__ac0-37__15: oklch(15% 0.37 40);
+  --b__color__orange__ac0-37__25: oklch(25% 0.37 40);
+  --b__color__orange__ac0-37__35: oklch(35% 0.37 40);
+  --b__color__orange__ac0-37__45: oklch(45% 0.37 40);
+  --b__color__orange__ac0-37__55: oklch(55% 0.37 40);
+  --b__color__orange__ac0-37__65: oklch(65% 0.37 40);
+  --b__color__orange__ac0-37__75: oklch(75% 0.37 40);
+  --b__color__orange__ac0-37__85: oklch(85% 0.37 40);
+  --b__color__orange__ac0-37__95: oklch(95% 0.37 40);
+  --b__color__amber__ac0-37__5: oklch(5% 0.37 70);
+  --b__color__amber__ac0-37__15: oklch(15% 0.37 70);
+  --b__color__amber__ac0-37__25: oklch(25% 0.37 70);
+  --b__color__amber__ac0-37__35: oklch(35% 0.37 70);
+  --b__color__amber__ac0-37__45: oklch(45% 0.37 70);
+  --b__color__amber__ac0-37__55: oklch(55% 0.37 70);
+  --b__color__amber__ac0-37__65: oklch(65% 0.37 70);
+  --b__color__amber__ac0-37__75: oklch(75% 0.37 70);
+  --b__color__amber__ac0-37__85: oklch(85% 0.37 70);
+  --b__color__amber__ac0-37__95: oklch(95% 0.37 70);
+  --b__color__yellow__ac0-37__5: oklch(5% 0.37 100);
+  --b__color__yellow__ac0-37__15: oklch(15% 0.37 100);
+  --b__color__yellow__ac0-37__25: oklch(25% 0.37 100);
+  --b__color__yellow__ac0-37__35: oklch(35% 0.37 100);
+  --b__color__yellow__ac0-37__45: oklch(45% 0.37 100);
+  --b__color__yellow__ac0-37__55: oklch(55% 0.37 100);
+  --b__color__yellow__ac0-37__65: oklch(65% 0.37 100);
+  --b__color__yellow__ac0-37__75: oklch(75% 0.37 100);
+  --b__color__yellow__ac0-37__85: oklch(85% 0.37 100);
+  --b__color__yellow__ac0-37__95: oklch(95% 0.37 100);
+  --b__color__lime__ac0-37__5: oklch(5% 0.37 130);
+  --b__color__lime__ac0-37__15: oklch(15% 0.37 130);
+  --b__color__lime__ac0-37__25: oklch(25% 0.37 130);
+  --b__color__lime__ac0-37__35: oklch(35% 0.37 130);
+  --b__color__lime__ac0-37__45: oklch(45% 0.37 130);
+  --b__color__lime__ac0-37__55: oklch(55% 0.37 130);
+  --b__color__lime__ac0-37__65: oklch(65% 0.37 130);
+  --b__color__lime__ac0-37__75: oklch(75% 0.37 130);
+  --b__color__lime__ac0-37__85: oklch(85% 0.37 130);
+  --b__color__lime__ac0-37__95: oklch(95% 0.37 130);
+  --b__color__teal__ac0-37__5: oklch(5% 0.37 160);
+  --b__color__teal__ac0-37__15: oklch(15% 0.37 160);
+  --b__color__teal__ac0-37__25: oklch(25% 0.37 160);
+  --b__color__teal__ac0-37__35: oklch(35% 0.37 160);
+  --b__color__teal__ac0-37__45: oklch(45% 0.37 160);
+  --b__color__teal__ac0-37__55: oklch(55% 0.37 160);
+  --b__color__teal__ac0-37__65: oklch(65% 0.37 160);
+  --b__color__teal__ac0-37__75: oklch(75% 0.37 160);
+  --b__color__teal__ac0-37__85: oklch(85% 0.37 160);
+  --b__color__teal__ac0-37__95: oklch(95% 0.37 160);
+  --b__color__cyan__ac0-37__5: oklch(5% 0.37 190);
+  --b__color__cyan__ac0-37__15: oklch(15% 0.37 190);
+  --b__color__cyan__ac0-37__25: oklch(25% 0.37 190);
+  --b__color__cyan__ac0-37__35: oklch(35% 0.37 190);
+  --b__color__cyan__ac0-37__45: oklch(45% 0.37 190);
+  --b__color__cyan__ac0-37__55: oklch(55% 0.37 190);
+  --b__color__cyan__ac0-37__65: oklch(65% 0.37 190);
+  --b__color__cyan__ac0-37__75: oklch(75% 0.37 190);
+  --b__color__cyan__ac0-37__85: oklch(85% 0.37 190);
+  --b__color__cyan__ac0-37__95: oklch(95% 0.37 190);
+  --b__color__sky__ac0-37__5: oklch(5% 0.37 220);
+  --b__color__sky__ac0-37__15: oklch(15% 0.37 220);
+  --b__color__sky__ac0-37__25: oklch(25% 0.37 220);
+  --b__color__sky__ac0-37__35: oklch(35% 0.37 220);
+  --b__color__sky__ac0-37__45: oklch(45% 0.37 220);
+  --b__color__sky__ac0-37__55: oklch(55% 0.37 220);
+  --b__color__sky__ac0-37__65: oklch(65% 0.37 220);
+  --b__color__sky__ac0-37__75: oklch(75% 0.37 220);
+  --b__color__sky__ac0-37__85: oklch(85% 0.37 220);
+  --b__color__sky__ac0-37__95: oklch(95% 0.37 220);
+  --b__color__blue__ac0-37__5: oklch(5% 0.37 250);
+  --b__color__blue__ac0-37__15: oklch(15% 0.37 250);
+  --b__color__blue__ac0-37__25: oklch(25% 0.37 250);
+  --b__color__blue__ac0-37__35: oklch(35% 0.37 250);
+  --b__color__blue__ac0-37__45: oklch(45% 0.37 250);
+  --b__color__blue__ac0-37__55: oklch(55% 0.37 250);
+  --b__color__blue__ac0-37__65: oklch(65% 0.37 250);
+  --b__color__blue__ac0-37__75: oklch(75% 0.37 250);
+  --b__color__blue__ac0-37__85: oklch(85% 0.37 250);
+  --b__color__blue__ac0-37__95: oklch(95% 0.37 250);
+  --b__color__purple__ac0-37__5: oklch(5% 0.37 280);
+  --b__color__purple__ac0-37__15: oklch(15% 0.37 280);
+  --b__color__purple__ac0-37__25: oklch(25% 0.37 280);
+  --b__color__purple__ac0-37__35: oklch(35% 0.37 280);
+  --b__color__purple__ac0-37__45: oklch(45% 0.37 280);
+  --b__color__purple__ac0-37__55: oklch(55% 0.37 280);
+  --b__color__purple__ac0-37__65: oklch(65% 0.37 280);
+  --b__color__purple__ac0-37__75: oklch(75% 0.37 280);
+  --b__color__purple__ac0-37__85: oklch(85% 0.37 280);
+  --b__color__purple__ac0-37__95: oklch(95% 0.37 280);
+  --b__color__fuchsia__ac0-37__5: oklch(5% 0.37 310);
+  --b__color__fuchsia__ac0-37__15: oklch(15% 0.37 310);
+  --b__color__fuchsia__ac0-37__25: oklch(25% 0.37 310);
+  --b__color__fuchsia__ac0-37__35: oklch(35% 0.37 310);
+  --b__color__fuchsia__ac0-37__45: oklch(45% 0.37 310);
+  --b__color__fuchsia__ac0-37__55: oklch(55% 0.37 310);
+  --b__color__fuchsia__ac0-37__65: oklch(65% 0.37 310);
+  --b__color__fuchsia__ac0-37__75: oklch(75% 0.37 310);
+  --b__color__fuchsia__ac0-37__85: oklch(85% 0.37 310);
+  --b__color__fuchsia__ac0-37__95: oklch(95% 0.37 310);
+  --b__color__pink__ac0-37__5: oklch(5% 0.37 340);
+  --b__color__pink__ac0-37__15: oklch(15% 0.37 340);
+  --b__color__pink__ac0-37__25: oklch(25% 0.37 340);
+  --b__color__pink__ac0-37__35: oklch(35% 0.37 340);
+  --b__color__pink__ac0-37__45: oklch(45% 0.37 340);
+  --b__color__pink__ac0-37__55: oklch(55% 0.37 340);
+  --b__color__pink__ac0-37__65: oklch(65% 0.37 340);
+  --b__color__pink__ac0-37__75: oklch(75% 0.37 340);
+  --b__color__pink__ac0-37__85: oklch(85% 0.37 340);
+  --b__color__pink__ac0-37__95: oklch(95% 0.37 340);
+}
+
+html {
+  font-size: 0.625em;
+}
+
+body {
+  margin: 0;
+  padding: 4rem 1.2rem;
+  font-family: "Inter", sans-serif;
+  display: grid;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  color: oklch(15% 0 0deg);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: oklch(20% 0 0deg);
+}
+
+.s-section {
+  display: grid;
+  justify-items: center;
+}
+
+.s-container {
+  width: min-content;
+  padding: 4rem 0;
+}
+
+.c-color-swatches-container {
+  display: grid;
+  justify-items: center;
+  gap: 3.6rem;
+}
+
+.c-color-swatches-row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.2rem;
+}
+
+.c-color-swatch {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 1rem;
+}
+
+.u-mb-10 {
+  margin-bottom: 4rem;
+}
+
+.c-color-swatch--rc-red5 {
+  background-color: var(--b__color__red__rc100__5);
+}
+
+.c-color-swatch--rc-red15 {
+  background-color: var(--b__color__red__rc100__15);
+}
+
+.c-color-swatch--rc-red25 {
+  background-color: var(--b__color__red__rc100__25);
+}
+
+.c-color-swatch--rc-red35 {
+  background-color: var(--b__color__red__rc100__35);
+}
+
+.c-color-swatch--rc-red45 {
+  background-color: var(--b__color__red__rc100__45);
+}
+
+.c-color-swatch--rc-red55 {
+  background-color: var(--b__color__red__rc100__55);
+}
+
+.c-color-swatch--rc-red65 {
+  background-color: var(--b__color__red__rc100__65);
+}
+
+.c-color-swatch--rc-red75 {
+  background-color: var(--b__color__red__rc100__75);
+}
+
+.c-color-swatch--rc-red85 {
+  background-color: var(--b__color__red__rc100__85);
+}
+
+.c-color-swatch--rc-red95 {
+  background-color: var(--b__color__red__rc100__95);
+}
+
+.c-color-swatch--rc-orange5 {
+  background-color: var(--b__color__orange__rc100__5);
+}
+
+.c-color-swatch--rc-orange15 {
+  background-color: var(--b__color__orange__rc100__15);
+}
+
+.c-color-swatch--rc-orange25 {
+  background-color: var(--b__color__orange__rc100__25);
+}
+
+.c-color-swatch--rc-orange35 {
+  background-color: var(--b__color__orange__rc100__35);
+}
+
+.c-color-swatch--rc-orange45 {
+  background-color: var(--b__color__orange__rc100__45);
+}
+
+.c-color-swatch--rc-orange55 {
+  background-color: var(--b__color__orange__rc100__55);
+}
+
+.c-color-swatch--rc-orange65 {
+  background-color: var(--b__color__orange__rc100__65);
+}
+
+.c-color-swatch--rc-orange75 {
+  background-color: var(--b__color__orange__rc100__75);
+}
+
+.c-color-swatch--rc-orange85 {
+  background-color: var(--b__color__orange__rc100__85);
+}
+
+.c-color-swatch--rc-orange95 {
+  background-color: var(--b__color__orange__rc100__95);
+}
+
+.c-color-swatch--rc-amber5 {
+  background-color: var(--b__color__amber__rc100__5);
+}
+
+.c-color-swatch--rc-amber15 {
+  background-color: var(--b__color__amber__rc100__15);
+}
+
+.c-color-swatch--rc-amber25 {
+  background-color: var(--b__color__amber__rc100__25);
+}
+
+.c-color-swatch--rc-amber35 {
+  background-color: var(--b__color__amber__rc100__35);
+}
+
+.c-color-swatch--rc-amber45 {
+  background-color: var(--b__color__amber__rc100__45);
+}
+
+.c-color-swatch--rc-amber55 {
+  background-color: var(--b__color__amber__rc100__55);
+}
+
+.c-color-swatch--rc-amber65 {
+  background-color: var(--b__color__amber__rc100__65);
+}
+
+.c-color-swatch--rc-amber75 {
+  background-color: var(--b__color__amber__rc100__75);
+}
+
+.c-color-swatch--rc-amber85 {
+  background-color: var(--b__color__amber__rc100__85);
+}
+
+.c-color-swatch--rc-amber95 {
+  background-color: var(--b__color__amber__rc100__95);
+}
+
+.c-color-swatch--rc-yellow5 {
+  background-color: var(--b__color__yellow__rc100__5);
+}
+
+.c-color-swatch--rc-yellow15 {
+  background-color: var(--b__color__yellow__rc100__15);
+}
+
+.c-color-swatch--rc-yellow25 {
+  background-color: var(--b__color__yellow__rc100__25);
+}
+
+.c-color-swatch--rc-yellow35 {
+  background-color: var(--b__color__yellow__rc100__35);
+}
+
+.c-color-swatch--rc-yellow45 {
+  background-color: var(--b__color__yellow__rc100__45);
+}
+
+.c-color-swatch--rc-yellow55 {
+  background-color: var(--b__color__yellow__rc100__55);
+}
+
+.c-color-swatch--rc-yellow65 {
+  background-color: var(--b__color__yellow__rc100__65);
+}
+
+.c-color-swatch--rc-yellow75 {
+  background-color: var(--b__color__yellow__rc100__75);
+}
+
+.c-color-swatch--rc-yellow85 {
+  background-color: var(--b__color__yellow__rc100__85);
+}
+
+.c-color-swatch--rc-yellow95 {
+  background-color: var(--b__color__yellow__rc100__95);
+}
+
+.c-color-swatch--rc-lime5 {
+  background-color: var(--b__color__lime__rc100__5);
+}
+
+.c-color-swatch--rc-lime15 {
+  background-color: var(--b__color__lime__rc100__15);
+}
+
+.c-color-swatch--rc-lime25 {
+  background-color: var(--b__color__lime__rc100__25);
+}
+
+.c-color-swatch--rc-lime35 {
+  background-color: var(--b__color__lime__rc100__35);
+}
+
+.c-color-swatch--rc-lime45 {
+  background-color: var(--b__color__lime__rc100__45);
+}
+
+.c-color-swatch--rc-lime55 {
+  background-color: var(--b__color__lime__rc100__55);
+}
+
+.c-color-swatch--rc-lime65 {
+  background-color: var(--b__color__lime__rc100__65);
+}
+
+.c-color-swatch--rc-lime75 {
+  background-color: var(--b__color__lime__rc100__75);
+}
+
+.c-color-swatch--rc-lime85 {
+  background-color: var(--b__color__lime__rc100__85);
+}
+
+.c-color-swatch--rc-lime95 {
+  background-color: var(--b__color__lime__rc100__95);
+}
+
+.c-color-swatch--rc-teal5 {
+  background-color: var(--b__color__teal__rc100__5);
+}
+
+.c-color-swatch--rc-teal15 {
+  background-color: var(--b__color__teal__rc100__15);
+}
+
+.c-color-swatch--rc-teal25 {
+  background-color: var(--b__color__teal__rc100__25);
+}
+
+.c-color-swatch--rc-teal35 {
+  background-color: var(--b__color__teal__rc100__35);
+}
+
+.c-color-swatch--rc-teal45 {
+  background-color: var(--b__color__teal__rc100__45);
+}
+
+.c-color-swatch--rc-teal55 {
+  background-color: var(--b__color__teal__rc100__55);
+}
+
+.c-color-swatch--rc-teal65 {
+  background-color: var(--b__color__teal__rc100__65);
+}
+
+.c-color-swatch--rc-teal75 {
+  background-color: var(--b__color__teal__rc100__75);
+}
+
+.c-color-swatch--rc-teal85 {
+  background-color: var(--b__color__teal__rc100__85);
+}
+
+.c-color-swatch--rc-teal95 {
+  background-color: var(--b__color__teal__rc100__95);
+}
+
+.c-color-swatch--rc-cyan5 {
+  background-color: var(--b__color__cyan__rc100__5);
+}
+
+.c-color-swatch--rc-cyan15 {
+  background-color: var(--b__color__cyan__rc100__15);
+}
+
+.c-color-swatch--rc-cyan25 {
+  background-color: var(--b__color__cyan__rc100__25);
+}
+
+.c-color-swatch--rc-cyan35 {
+  background-color: var(--b__color__cyan__rc100__35);
+}
+
+.c-color-swatch--rc-cyan45 {
+  background-color: var(--b__color__cyan__rc100__45);
+}
+
+.c-color-swatch--rc-cyan55 {
+  background-color: var(--b__color__cyan__rc100__55);
+}
+
+.c-color-swatch--rc-cyan65 {
+  background-color: var(--b__color__cyan__rc100__65);
+}
+
+.c-color-swatch--rc-cyan75 {
+  background-color: var(--b__color__cyan__rc100__75);
+}
+
+.c-color-swatch--rc-cyan85 {
+  background-color: var(--b__color__cyan__rc100__85);
+}
+
+.c-color-swatch--rc-cyan95 {
+  background-color: var(--b__color__cyan__rc100__95);
+}
+
+.c-color-swatch--rc-sky5 {
+  background-color: var(--b__color__sky__rc100__5);
+}
+
+.c-color-swatch--rc-sky15 {
+  background-color: var(--b__color__sky__rc100__15);
+}
+
+.c-color-swatch--rc-sky25 {
+  background-color: var(--b__color__sky__rc100__25);
+}
+
+.c-color-swatch--rc-sky35 {
+  background-color: var(--b__color__sky__rc100__35);
+}
+
+.c-color-swatch--rc-sky45 {
+  background-color: var(--b__color__sky__rc100__45);
+}
+
+.c-color-swatch--rc-sky55 {
+  background-color: var(--b__color__sky__rc100__55);
+}
+
+.c-color-swatch--rc-sky65 {
+  background-color: var(--b__color__sky__rc100__65);
+}
+
+.c-color-swatch--rc-sky75 {
+  background-color: var(--b__color__sky__rc100__75);
+}
+
+.c-color-swatch--rc-sky85 {
+  background-color: var(--b__color__sky__rc100__85);
+}
+
+.c-color-swatch--rc-sky95 {
+  background-color: var(--b__color__sky__rc100__95);
+}
+
+.c-color-swatch--rc-blue5 {
+  background-color: var(--b__color__blue__rc100__5);
+}
+
+.c-color-swatch--rc-blue15 {
+  background-color: var(--b__color__blue__rc100__15);
+}
+
+.c-color-swatch--rc-blue25 {
+  background-color: var(--b__color__blue__rc100__25);
+}
+
+.c-color-swatch--rc-blue35 {
+  background-color: var(--b__color__blue__rc100__35);
+}
+
+.c-color-swatch--rc-blue45 {
+  background-color: var(--b__color__blue__rc100__45);
+}
+
+.c-color-swatch--rc-blue55 {
+  background-color: var(--b__color__blue__rc100__55);
+}
+
+.c-color-swatch--rc-blue65 {
+  background-color: var(--b__color__blue__rc100__65);
+}
+
+.c-color-swatch--rc-blue75 {
+  background-color: var(--b__color__blue__rc100__75);
+}
+
+.c-color-swatch--rc-blue85 {
+  background-color: var(--b__color__blue__rc100__85);
+}
+
+.c-color-swatch--rc-blue95 {
+  background-color: var(--b__color__blue__rc100__95);
+}
+
+.c-color-swatch--rc-purple5 {
+  background-color: var(--b__color__purple__rc100__5);
+}
+
+.c-color-swatch--rc-purple15 {
+  background-color: var(--b__color__purple__rc100__15);
+}
+
+.c-color-swatch--rc-purple25 {
+  background-color: var(--b__color__purple__rc100__25);
+}
+
+.c-color-swatch--rc-purple35 {
+  background-color: var(--b__color__purple__rc100__35);
+}
+
+.c-color-swatch--rc-purple45 {
+  background-color: var(--b__color__purple__rc100__45);
+}
+
+.c-color-swatch--rc-purple55 {
+  background-color: var(--b__color__purple__rc100__55);
+}
+
+.c-color-swatch--rc-purple65 {
+  background-color: var(--b__color__purple__rc100__65);
+}
+
+.c-color-swatch--rc-purple75 {
+  background-color: var(--b__color__purple__rc100__75);
+}
+
+.c-color-swatch--rc-purple85 {
+  background-color: var(--b__color__purple__rc100__85);
+}
+
+.c-color-swatch--rc-purple95 {
+  background-color: var(--b__color__purple__rc100__95);
+}
+
+.c-color-swatch--rc-fuchsia5 {
+  background-color: var(--b__color__fuchsia__rc100__5);
+}
+
+.c-color-swatch--rc-fuchsia15 {
+  background-color: var(--b__color__fuchsia__rc100__15);
+}
+
+.c-color-swatch--rc-fuchsia25 {
+  background-color: var(--b__color__fuchsia__rc100__25);
+}
+
+.c-color-swatch--rc-fuchsia35 {
+  background-color: var(--b__color__fuchsia__rc100__35);
+}
+
+.c-color-swatch--rc-fuchsia45 {
+  background-color: var(--b__color__fuchsia__rc100__45);
+}
+
+.c-color-swatch--rc-fuchsia55 {
+  background-color: var(--b__color__fuchsia__rc100__55);
+}
+
+.c-color-swatch--rc-fuchsia65 {
+  background-color: var(--b__color__fuchsia__rc100__65);
+}
+
+.c-color-swatch--rc-fuchsia75 {
+  background-color: var(--b__color__fuchsia__rc100__75);
+}
+
+.c-color-swatch--rc-fuchsia85 {
+  background-color: var(--b__color__fuchsia__rc100__85);
+}
+
+.c-color-swatch--rc-fuchsia95 {
+  background-color: var(--b__color__fuchsia__rc100__95);
+}
+
+.c-color-swatch--rc-pink5 {
+  background-color: var(--b__color__pink__rc100__5);
+}
+
+.c-color-swatch--rc-pink15 {
+  background-color: var(--b__color__pink__rc100__15);
+}
+
+.c-color-swatch--rc-pink25 {
+  background-color: var(--b__color__pink__rc100__25);
+}
+
+.c-color-swatch--rc-pink35 {
+  background-color: var(--b__color__pink__rc100__35);
+}
+
+.c-color-swatch--rc-pink45 {
+  background-color: var(--b__color__pink__rc100__45);
+}
+
+.c-color-swatch--rc-pink55 {
+  background-color: var(--b__color__pink__rc100__55);
+}
+
+.c-color-swatch--rc-pink65 {
+  background-color: var(--b__color__pink__rc100__65);
+}
+
+.c-color-swatch--rc-pink75 {
+  background-color: var(--b__color__pink__rc100__75);
+}
+
+.c-color-swatch--rc-pink85 {
+  background-color: var(--b__color__pink__rc100__85);
+}
+
+.c-color-swatch--rc-pink95 {
+  background-color: var(--b__color__pink__rc100__95);
+}
+
+.c-color-swatch--ac-red5 {
+  background-color: var(--b__color__red__ac0-37__5);
+}
+
+.c-color-swatch--ac-red15 {
+  background-color: var(--b__color__red__ac0-37__15);
+}
+
+.c-color-swatch--ac-red25 {
+  background-color: var(--b__color__red__ac0-37__25);
+}
+
+.c-color-swatch--ac-red35 {
+  background-color: var(--b__color__red__ac0-37__35);
+}
+
+.c-color-swatch--ac-red45 {
+  background-color: var(--b__color__red__ac0-37__45);
+}
+
+.c-color-swatch--ac-red55 {
+  background-color: var(--b__color__red__ac0-37__55);
+}
+
+.c-color-swatch--ac-red65 {
+  background-color: var(--b__color__red__ac0-37__65);
+}
+
+.c-color-swatch--ac-red75 {
+  background-color: var(--b__color__red__ac0-37__75);
+}
+
+.c-color-swatch--ac-red85 {
+  background-color: var(--b__color__red__ac0-37__85);
+}
+
+.c-color-swatch--ac-red95 {
+  background-color: var(--b__color__red__ac0-37__95);
+}
+
+.c-color-swatch--ac-orange5 {
+  background-color: var(--b__color__orange__ac0-37__5);
+}
+
+.c-color-swatch--ac-orange15 {
+  background-color: var(--b__color__orange__ac0-37__15);
+}
+
+.c-color-swatch--ac-orange25 {
+  background-color: var(--b__color__orange__ac0-37__25);
+}
+
+.c-color-swatch--ac-orange35 {
+  background-color: var(--b__color__orange__ac0-37__35);
+}
+
+.c-color-swatch--ac-orange45 {
+  background-color: var(--b__color__orange__ac0-37__45);
+}
+
+.c-color-swatch--ac-orange55 {
+  background-color: var(--b__color__orange__ac0-37__55);
+}
+
+.c-color-swatch--ac-orange65 {
+  background-color: var(--b__color__orange__ac0-37__65);
+}
+
+.c-color-swatch--ac-orange75 {
+  background-color: var(--b__color__orange__ac0-37__75);
+}
+
+.c-color-swatch--ac-orange85 {
+  background-color: var(--b__color__orange__ac0-37__85);
+}
+
+.c-color-swatch--ac-orange95 {
+  background-color: var(--b__color__orange__ac0-37__95);
+}
+
+.c-color-swatch--ac-amber5 {
+  background-color: var(--b__color__amber__ac0-37__5);
+}
+
+.c-color-swatch--ac-amber15 {
+  background-color: var(--b__color__amber__ac0-37__15);
+}
+
+.c-color-swatch--ac-amber25 {
+  background-color: var(--b__color__amber__ac0-37__25);
+}
+
+.c-color-swatch--ac-amber35 {
+  background-color: var(--b__color__amber__ac0-37__35);
+}
+
+.c-color-swatch--ac-amber45 {
+  background-color: var(--b__color__amber__ac0-37__45);
+}
+
+.c-color-swatch--ac-amber55 {
+  background-color: var(--b__color__amber__ac0-37__55);
+}
+
+.c-color-swatch--ac-amber65 {
+  background-color: var(--b__color__amber__ac0-37__65);
+}
+
+.c-color-swatch--ac-amber75 {
+  background-color: var(--b__color__amber__ac0-37__75);
+}
+
+.c-color-swatch--ac-amber85 {
+  background-color: var(--b__color__amber__ac0-37__85);
+}
+
+.c-color-swatch--ac-amber95 {
+  background-color: var(--b__color__amber__ac0-37__95);
+}
+
+.c-color-swatch--ac-yellow5 {
+  background-color: var(--b__color__yellow__ac0-37__5);
+}
+
+.c-color-swatch--ac-yellow15 {
+  background-color: var(--b__color__yellow__ac0-37__15);
+}
+
+.c-color-swatch--ac-yellow25 {
+  background-color: var(--b__color__yellow__ac0-37__25);
+}
+
+.c-color-swatch--ac-yellow35 {
+  background-color: var(--b__color__yellow__ac0-37__35);
+}
+
+.c-color-swatch--ac-yellow45 {
+  background-color: var(--b__color__yellow__ac0-37__45);
+}
+
+.c-color-swatch--ac-yellow55 {
+  background-color: var(--b__color__yellow__ac0-37__55);
+}
+
+.c-color-swatch--ac-yellow65 {
+  background-color: var(--b__color__yellow__ac0-37__65);
+}
+
+.c-color-swatch--ac-yellow75 {
+  background-color: var(--b__color__yellow__ac0-37__75);
+}
+
+.c-color-swatch--ac-yellow85 {
+  background-color: var(--b__color__yellow__ac0-37__85);
+}
+
+.c-color-swatch--ac-yellow95 {
+  background-color: var(--b__color__yellow__ac0-37__95);
+}
+
+.c-color-swatch--ac-lime5 {
+  background-color: var(--b__color__lime__ac0-37__5);
+}
+
+.c-color-swatch--ac-lime15 {
+  background-color: var(--b__color__lime__ac0-37__15);
+}
+
+.c-color-swatch--ac-lime25 {
+  background-color: var(--b__color__lime__ac0-37__25);
+}
+
+.c-color-swatch--ac-lime35 {
+  background-color: var(--b__color__lime__ac0-37__35);
+}
+
+.c-color-swatch--ac-lime45 {
+  background-color: var(--b__color__lime__ac0-37__45);
+}
+
+.c-color-swatch--ac-lime55 {
+  background-color: var(--b__color__lime__ac0-37__55);
+}
+
+.c-color-swatch--ac-lime65 {
+  background-color: var(--b__color__lime__ac0-37__65);
+}
+
+.c-color-swatch--ac-lime75 {
+  background-color: var(--b__color__lime__ac0-37__75);
+}
+
+.c-color-swatch--ac-lime85 {
+  background-color: var(--b__color__lime__ac0-37__85);
+}
+
+.c-color-swatch--ac-lime95 {
+  background-color: var(--b__color__lime__ac0-37__95);
+}
+
+.c-color-swatch--ac-teal5 {
+  background-color: var(--b__color__teal__ac0-37__5);
+}
+
+.c-color-swatch--ac-teal15 {
+  background-color: var(--b__color__teal__ac0-37__15);
+}
+
+.c-color-swatch--ac-teal25 {
+  background-color: var(--b__color__teal__ac0-37__25);
+}
+
+.c-color-swatch--ac-teal35 {
+  background-color: var(--b__color__teal__ac0-37__35);
+}
+
+.c-color-swatch--ac-teal45 {
+  background-color: var(--b__color__teal__ac0-37__45);
+}
+
+.c-color-swatch--ac-teal55 {
+  background-color: var(--b__color__teal__ac0-37__55);
+}
+
+.c-color-swatch--ac-teal65 {
+  background-color: var(--b__color__teal__ac0-37__65);
+}
+
+.c-color-swatch--ac-teal75 {
+  background-color: var(--b__color__teal__ac0-37__75);
+}
+
+.c-color-swatch--ac-teal85 {
+  background-color: var(--b__color__teal__ac0-37__85);
+}
+
+.c-color-swatch--ac-teal95 {
+  background-color: var(--b__color__teal__ac0-37__95);
+}
+
+.c-color-swatch--ac-cyan5 {
+  background-color: var(--b__color__cyan__ac0-37__5);
+}
+
+.c-color-swatch--ac-cyan15 {
+  background-color: var(--b__color__cyan__ac0-37__15);
+}
+
+.c-color-swatch--ac-cyan25 {
+  background-color: var(--b__color__cyan__ac0-37__25);
+}
+
+.c-color-swatch--ac-cyan35 {
+  background-color: var(--b__color__cyan__ac0-37__35);
+}
+
+.c-color-swatch--ac-cyan45 {
+  background-color: var(--b__color__cyan__ac0-37__45);
+}
+
+.c-color-swatch--ac-cyan55 {
+  background-color: var(--b__color__cyan__ac0-37__55);
+}
+
+.c-color-swatch--ac-cyan65 {
+  background-color: var(--b__color__cyan__ac0-37__65);
+}
+
+.c-color-swatch--ac-cyan75 {
+  background-color: var(--b__color__cyan__ac0-37__75);
+}
+
+.c-color-swatch--ac-cyan85 {
+  background-color: var(--b__color__cyan__ac0-37__85);
+}
+
+.c-color-swatch--ac-cyan95 {
+  background-color: var(--b__color__cyan__ac0-37__95);
+}
+
+.c-color-swatch--ac-sky5 {
+  background-color: var(--b__color__sky__ac0-37__5);
+}
+
+.c-color-swatch--ac-sky15 {
+  background-color: var(--b__color__sky__ac0-37__15);
+}
+
+.c-color-swatch--ac-sky25 {
+  background-color: var(--b__color__sky__ac0-37__25);
+}
+
+.c-color-swatch--ac-sky35 {
+  background-color: var(--b__color__sky__ac0-37__35);
+}
+
+.c-color-swatch--ac-sky45 {
+  background-color: var(--b__color__sky__ac0-37__45);
+}
+
+.c-color-swatch--ac-sky55 {
+  background-color: var(--b__color__sky__ac0-37__55);
+}
+
+.c-color-swatch--ac-sky65 {
+  background-color: var(--b__color__sky__ac0-37__65);
+}
+
+.c-color-swatch--ac-sky75 {
+  background-color: var(--b__color__sky__ac0-37__75);
+}
+
+.c-color-swatch--ac-sky85 {
+  background-color: var(--b__color__sky__ac0-37__85);
+}
+
+.c-color-swatch--ac-sky95 {
+  background-color: var(--b__color__sky__ac0-37__95);
+}
+
+.c-color-swatch--ac-blue5 {
+  background-color: var(--b__color__blue__ac0-37__5);
+}
+
+.c-color-swatch--ac-blue15 {
+  background-color: var(--b__color__blue__ac0-37__15);
+}
+
+.c-color-swatch--ac-blue25 {
+  background-color: var(--b__color__blue__ac0-37__25);
+}
+
+.c-color-swatch--ac-blue35 {
+  background-color: var(--b__color__blue__ac0-37__35);
+}
+
+.c-color-swatch--ac-blue45 {
+  background-color: var(--b__color__blue__ac0-37__45);
+}
+
+.c-color-swatch--ac-blue55 {
+  background-color: var(--b__color__blue__ac0-37__55);
+}
+
+.c-color-swatch--ac-blue65 {
+  background-color: var(--b__color__blue__ac0-37__65);
+}
+
+.c-color-swatch--ac-blue75 {
+  background-color: var(--b__color__blue__ac0-37__75);
+}
+
+.c-color-swatch--ac-blue85 {
+  background-color: var(--b__color__blue__ac0-37__85);
+}
+
+.c-color-swatch--ac-blue95 {
+  background-color: var(--b__color__blue__ac0-37__95);
+}
+
+.c-color-swatch--ac-purple5 {
+  background-color: var(--b__color__purple__ac0-37__5);
+}
+
+.c-color-swatch--ac-purple15 {
+  background-color: var(--b__color__purple__ac0-37__15);
+}
+
+.c-color-swatch--ac-purple25 {
+  background-color: var(--b__color__purple__ac0-37__25);
+}
+
+.c-color-swatch--ac-purple35 {
+  background-color: var(--b__color__purple__ac0-37__35);
+}
+
+.c-color-swatch--ac-purple45 {
+  background-color: var(--b__color__purple__ac0-37__45);
+}
+
+.c-color-swatch--ac-purple55 {
+  background-color: var(--b__color__purple__ac0-37__55);
+}
+
+.c-color-swatch--ac-purple65 {
+  background-color: var(--b__color__purple__ac0-37__65);
+}
+
+.c-color-swatch--ac-purple75 {
+  background-color: var(--b__color__purple__ac0-37__75);
+}
+
+.c-color-swatch--ac-purple85 {
+  background-color: var(--b__color__purple__ac0-37__85);
+}
+
+.c-color-swatch--ac-purple95 {
+  background-color: var(--b__color__purple__ac0-37__95);
+}
+
+.c-color-swatch--ac-fuchsia5 {
+  background-color: var(--b__color__fuchsia__ac0-37__5);
+}
+
+.c-color-swatch--ac-fuchsia15 {
+  background-color: var(--b__color__fuchsia__ac0-37__15);
+}
+
+.c-color-swatch--ac-fuchsia25 {
+  background-color: var(--b__color__fuchsia__ac0-37__25);
+}
+
+.c-color-swatch--ac-fuchsia35 {
+  background-color: var(--b__color__fuchsia__ac0-37__35);
+}
+
+.c-color-swatch--ac-fuchsia45 {
+  background-color: var(--b__color__fuchsia__ac0-37__45);
+}
+
+.c-color-swatch--ac-fuchsia55 {
+  background-color: var(--b__color__fuchsia__ac0-37__55);
+}
+
+.c-color-swatch--ac-fuchsia65 {
+  background-color: var(--b__color__fuchsia__ac0-37__65);
+}
+
+.c-color-swatch--ac-fuchsia75 {
+  background-color: var(--b__color__fuchsia__ac0-37__75);
+}
+
+.c-color-swatch--ac-fuchsia85 {
+  background-color: var(--b__color__fuchsia__ac0-37__85);
+}
+
+.c-color-swatch--ac-fuchsia95 {
+  background-color: var(--b__color__fuchsia__ac0-37__95);
+}
+
+.c-color-swatch--ac-pink5 {
+  background-color: var(--b__color__pink__ac0-37__5);
+}
+
+.c-color-swatch--ac-pink15 {
+  background-color: var(--b__color__pink__ac0-37__15);
+}
+
+.c-color-swatch--ac-pink25 {
+  background-color: var(--b__color__pink__ac0-37__25);
+}
+
+.c-color-swatch--ac-pink35 {
+  background-color: var(--b__color__pink__ac0-37__35);
+}
+
+.c-color-swatch--ac-pink45 {
+  background-color: var(--b__color__pink__ac0-37__45);
+}
+
+.c-color-swatch--ac-pink55 {
+  background-color: var(--b__color__pink__ac0-37__55);
+}
+
+.c-color-swatch--ac-pink65 {
+  background-color: var(--b__color__pink__ac0-37__65);
+}
+
+.c-color-swatch--ac-pink75 {
+  background-color: var(--b__color__pink__ac0-37__75);
+}
+
+.c-color-swatch--ac-pink85 {
+  background-color: var(--b__color__pink__ac0-37__85);
+}
+
+.c-color-swatch--ac-pink95 {
+  background-color: var(--b__color__pink__ac0-37__95);
+}
