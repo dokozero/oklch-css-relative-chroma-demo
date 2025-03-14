@@ -13,6 +13,7 @@ $color-names: (
   340: 'pink'
 );
 
+// 'srgb' | 'display-p3 | 'rec2020
 $color-space: 'display-p3';
 
 $lightness-steps: 10;
