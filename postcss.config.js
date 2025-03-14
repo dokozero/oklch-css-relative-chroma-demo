@@ -1,4 +1,4 @@
-import postcssOklchRelativeChroma from './postcss-oklch-relative-chroma/dist/index.js'
+import postcssOklchRelativeChroma from './src/postcss-oklch-relative-chroma/dist/index.js'
 
 export default {
   plugins: [postcssOklchRelativeChroma()]
