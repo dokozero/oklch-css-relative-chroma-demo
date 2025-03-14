@@ -1,4 +1,4 @@
-# OkLCH CSS relative chroma
+# OkLCH CSS relative chroma documentation
 
 This repo holds the documentation for the proposal of an upgraded `oklch()` notation with a relative chroma feature.
 
@@ -7,6 +7,13 @@ It uses the PostCSS plugin [postcss-oklch-relative-chroma](https://github.com/do
 This is a work in progress which might change in the future.
 
 To see relative chroma in action visually, you can use the [OkColor Figma plugin](https://www.figma.com/community/plugin/1173638098109123591/okcolor).
+
+## Table of contents
+
+- [Motivation](#motivation)
+- [Proposal](#proposal)
+- [Advantages](#advantages)
+- [How to modify the demo](#how-to-modify-the-demo)
 
 ## Motivation
 
@@ -59,3 +66,14 @@ From there, we can easily create a color palette by going for example from `oklc
 In the dist/ demo file, you can see what happens if we try the same logic of palette generation on the fly with a fixed absolute chroma.
 
 Because of the way browsers clip the values, **we lose the uniformity OkLCH** and thus, lightness, absolute chroma, and hue consistency of the palette.
+
+## How to modify the demo
+
+- Install the npm dependencies.
+- Modify the constants if you want in the `src/demo/css/sass/data.scss` file.
+- Do the same in the `<script>` tag in `src/demo/index.html` (`LIGHTNESS_STEP` is enough).
+- Make sure that build.zsh is executable with `chmod +x build.zsh`.
+- Run `npm run build` or `pnpm build`.
+- Open `dist/index.html` in your browser.
+
+You can also watch the src files with `npm run all-css-watch` or `pnpm all-css-watch` and open index.html from the src folder to see your changes live.
