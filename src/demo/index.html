@@ -18,18 +18,26 @@
     <div class="s-section">
       <div class="s-container">
         <h2>Relative chroma palette</h2>
-        <p class="u-mb-10">
+        <p>
           The palette's swatches are made with the new notation: oklch(colorspace L RC H), where RC is a relative chroma. You can
           see that we got nice results compared to next example wit ha fixed absolute chroma value for all swatches.
+        </p>
+        <p class="u-mb-10">
+          The color codes used are like this (example for the first red palette): <br />
+          oklch(display-p3 5% 100% 10) to oklch(display-p3 95% 100% 10) by lightness steps of 5%.
         </p>
         <div id="js-relativeChromaWrapper"></div>
       </div>
 
       <div class="s-container">
         <h2>Absolute chroma palette</h2>
-        <p class="u-mb-10">
+        <p>
           Here, we use the same absolute chroma value for all swatches. You can see that for some colors, because of the browser
           clamping method, we got hue and lightness shifts.
+        </p>
+        <p class="u-mb-10">
+          The color codes used are like this (example for the first red palette): <br />
+          oklch(5% 0.37 10) to oklch(95% 0.37 10) by lightness steps of 5%.
         </p>
         <div id="js-absoluteChromaWrapper"></div>
       </div>
