@@ -31,7 +31,7 @@ Wouldn't it be great if from `oklch()`, we could somehow say: "for a lightness o
 
 ## Proposal
 
-From the current `oklch()` notation, the idea is to add support for a relative chroma value like this `oklch(display-p3 80% 100% 20)`.
+From the current `oklch()` notation, the idea is to add support for a relative chroma value like this `oklch(display-p3 80% 100% 20)`. This is similar to `color(colorspace c1 c2 c3)` notation used to define RGB colors in relation to a `colorspace` value.
 
 But why not simply `oklch(80% 100% 20)`? In that case, we are missing something, indeed, with an absolute chroma value like 0.24, we don't need to specify the color model in which color space we want to be, but with a relative value, yes.
 
