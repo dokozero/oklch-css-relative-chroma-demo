@@ -16,11 +16,11 @@ $color-names: (
 // 'srgb' | 'display-p3 | 'rec2020
 $color-space: 'display-p3';
 
-$lightness-steps: 10;
+$lightness-steps: 5;
 $lightness-min-value: 5;
 $lightness-max-value: 95;
 
-$relative-chroma: 100;
+$relative-chroma: 90;
 $absolute-chroma: 0.37;
 
 // To use in the design token name.

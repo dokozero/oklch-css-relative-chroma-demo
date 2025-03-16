@@ -4,6 +4,7 @@
 :root {
   $hue-current-value: data.$hue-start-value;
 
+  // Relative chroma palette design tokens.
   @while $hue-current-value <= 350 {
     $lightness-current-value: data.$lightness-min-value;
 
@@ -20,6 +21,7 @@
   // Reset hue loop value.
   $hue-current-value: data.$hue-start-value;
 
+  // Absolute chroma palette design tokens.
   @while $hue-current-value <= 350 {
     $lightness-current-value: data.$lightness-min-value;
 

@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use './data';
-@use './base-color-palette';
+@use './palette-tokens';
 
 html {
   font-size: calc(1em / 1.6);
@@ -39,21 +39,21 @@ p {
   padding: 4rem 0;
 }
 
-.c-color-swatches-container {
+.c-color-palettes-container {
   display: grid;
   justify-items: center;
-  gap: 3.6rem;
+  gap: 3.2rem;
 }
 
-.c-color-swatches-row {
+.c-color-palette {
   display: grid;
   grid-auto-flow: column;
   gap: 1.2rem;
 }
 
-.c-color-swatch {
-  width: 7rem;
-  height: 7rem;
+.c-color-palette__lightness-variant {
+  width: 5rem;
+  height: 5rem;
   border-radius: 1rem;
 }
 
@@ -67,7 +67,7 @@ $hue-current-value: data.$hue-start-value;
   $lightness-current-value: data.$lightness-min-value;
 
   @while $lightness-current-value <= data.$lightness-max-value {
-    .c-color-swatch--rc-#{map.get(data.$color-names, $hue-current-value)}#{$lightness-current-value} {
+    .c-color-palette__lightness-variant--rc-#{map.get(data.$color-names, $hue-current-value)}#{$lightness-current-value} {
       background-color: var(
         --b__color__#{map.get(data.$color-names, $hue-current-value)}__rc#{data.$relative-chroma}__#{$lightness-current-value}
       );
@@ -86,7 +86,7 @@ $hue-current-value: data.$hue-start-value;
   $lightness-current-value: data.$lightness-min-value;
 
   @while $lightness-current-value <= data.$lightness-max-value {
-    .c-color-swatch--ac-#{map.get(data.$color-names, $hue-current-value)}#{$lightness-current-value} {
+    .c-color-palette__lightness-variant--ac-#{map.get(data.$color-names, $hue-current-value)}#{$lightness-current-value} {
       background-color: var(
         --b__color__#{map.get(
             data.$color-names,
