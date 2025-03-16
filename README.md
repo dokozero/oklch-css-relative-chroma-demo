@@ -25,7 +25,7 @@ From there, currently, browsers will clip the individual RGB values of the reque
 
 For example, `oklch(80% 0.37 20)` is [out of gamut](https://oklch.com/#80,0.37,20,100) but we don't know that just by reading the color code. In that case, for a P3 display, the resulting color in browsers will be `oklch(65.71% 0.2963 14.53)`, but we might still think that we get a color with a lightness of 80 % and a hue of 20 because in the code, we only have `oklch(80% 0.37 20)` displayed.
 
-Check this Codepen for more examples: [OkLCH gamut clipping tests](https://codepen.io/dokozero/pen/pvoPpdg).
+Check this Codepen for more examples: [OkLCH gamut clipping tests](https://codepen.io/dokozero/full/pvoPpdg).
 
 Wouldn't it be great if from `oklch()`, we could somehow say: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 space".
 
@@ -69,11 +69,11 @@ From there, we can easily create a color palette by going from `oklch(display-p3
 
 Here is a visualization in Figma with OkColor plugin:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/oklch-palette-creation.webp?updatedAt=1742115531237)
+![Color palettes using relative chroma and OkColor Figma plugin.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/oklch-palette-creation.webp?updatedAt=1742115531237)
 
 If we tried to use the same absolute chroma value for all lightness variants, we would get palettes that are not uniform with unwanted lightness and hue shifting:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/fixed-absolute-chroma-palette.webp?updatedAt=1742115531207)
+![Two color palettes, first with fixed relative chroma, second with fixed absolute chroma.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/fixed-absolute-chroma-palette.webp?updatedAt=1742115531207)
 
 For more examples of this, you can see the demo file in the dist folder which has more palettes with fixed absolute chroma values.
 
@@ -81,7 +81,7 @@ Note that even if we clip only the chroma, using a fixed relative chroma for the
 
 Now for some practical examples, we can then easily create lightness variants on the fly as needed:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/oklch-variant-usage.webp?updatedAt=1742115531189)
+![Practical UI Design examples with lightness variants that uses fixed relative chroma values.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/oklch-variant-usage.webp?updatedAt=1742115531189)
 
 Of course, here we could still use the same absolute chroma value for the variants, but for consistency sake and depending on the color we start from, we could be out of gamut and have unwanted lightness and hue shifts.
 
@@ -110,12 +110,12 @@ As you can see in the demo file, some palettes like the yellow one lack chroma i
 
 This is not a bug from OkLCH but a limitation of our screens and human vision. Compared for example to a blue hue, you can see with OkColor this lack of chroma for the yellow hue:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-variants.webp?updatedAt=1742115531202)
+![Two palettes, first blue one with good chroma progression, second yellow one with lack of chroma in the dark lightness variants.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-variants.webp?updatedAt=1742115531202)
 
 The solution here is to manually shift the hue of palette's lightness variants by a fixed step:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-palette-tints.webp?updatedAt=1742115531135)
+![Two yellow palettes, first with manual hue shifting for more chroma in the dark lightness variants, second without manual hue shifting.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-palette-tints.webp?updatedAt=1742115531135)
 
 But a simpler approach is to use lightness variants from two palettes. For example, the lime palette below could benefit from a hue shift in the dark variants toward green hue, but in practice and if we create lightness variants on the fly, we can simply use two palettes:
 
-![Color palettes using relative chroma and OkColor Figma plugin](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/two-palettes-harmony.webp?updatedAt=1742115531200)
+![UI Design card example with two palettes.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/two-palettes-harmony.webp?updatedAt=1742115531200)
