@@ -33,9 +33,9 @@ Wouldn't it be great if from `oklch()`, we could somehow say: "for a lightness o
 
 From the current `oklch()` notation, the idea is to add support for a relative chroma value like this `oklch(display-p3 80% 100% 20)`. This is similar to `color(colorspace c1 c2 c3)` notation used to define RGB colors in relation to a `colorspace` value.
 
-But why not simply `oklch(80% 100% 20)`? In that case, we are missing something, indeed, with an absolute chroma value like 0.24, we don't need to specify the color model in which color space we want to be, but with a relative value, yes.
+But why not simply `oklch(80% 100% 20)`? In that case, we are missing something, indeed, with an absolute chroma value like 0.24, we don't need to specify in which color space we want to be, but with a relative value, yes.
 
-In fact, with models like `hsl()` or `rgb()`, we also have relative values, but we can't specify the model to which color space they are relative, that's because with them, in a CSS context, **they are always relative to the sRGB space.**
+In fact, with models like `hsl()` or `rgb()`, we also have relative values, but we can't specify to which color space they are relative, that's because with them, in a CSS context, **they are always relative to the sRGB space.**
 
 So, with `oklch(80% 100% 20)`, to which space is 100 % relative to? We need this information to get the right absolute chroma value.
 
@@ -51,7 +51,7 @@ With this upgraded notation, we easily stay within the color space bounds we wan
 
 We can think of it as **an improved HSL color model,** which is uniform and allows us to pick colors in larger color spaces than sRGB.
 
-`colorspace` can either be `srgb`, `display-p3` or `rec2020` (and more in theory, but for now, the [PostCSS plugin](https://github.com/dokozero/postcss-oklch-relative-chroma) supports these only.).
+`colorspace` can either be `srgb`, `display-p3` or `rec2020` (and more in theory, but for now, the [PostCSS plugin](https://github.com/dokozero/postcss-oklch-relative-chroma) supports these only).
 
 From there, `oklch(display-p3 80% 100% 20)` has to be read as: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 space", which gives us `oklch(80% 0.148 20)`.
 
@@ -97,7 +97,7 @@ In the case we need to create complete palettes before designing, we can manuall
 
 - Install the npm dependencies.
 - Modify the constants if you want in the `src/demo/css/sass/data.scss` file.
-- Do the same in the `<script>` tag in `src/demo/index.html` (`LIGHTNESS_STEP` is enough).
+- Do the same in the `<script>` tag in `src/demo/index.html` (`LIGHTNESS_STEPS` is enough).
 - Make sure that build.zsh is executable with `chmod +x build.zsh`.
 - Run `npm run build` or `pnpm build`.
 - Open `dist/index.html` in your browser.
