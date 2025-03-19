@@ -30,8 +30,8 @@ const App = () => {
         </p>
         <p className="u-mb-10">
           If we need to create good-looking palettes before design, with the relative chroma feature it's easy. As you can see in
-          manual-palette-tokens.scss, all you need to do is reduce the relative chroma for the lightness variant that stands out
-          and shift the hue (with a fixed step value) of some palette like yellow to compensate for the lack of chroma in darker
+          manual-palette-tokens.scss, all you need to do is reduce the relative chroma for the lightness variants that stand out
+          and shift the hues (with a fixed step value) of some palettes like yellow to compensate for the lack of chroma in darker
           variants.
         </p>
         <ColorPalette paletteChromaType="manual-rc" />

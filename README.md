@@ -6,7 +6,7 @@ It uses the PostCSS plugin [postcss-oklch-relative-chroma](https://github.com/do
 
 Clone and run `npm run preview` or `pnpm preview` to see the results:
 
-![Palettes from the demo.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/demo.webp?updatedAt=1742417220300)
+![Palettes from the demo.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/demo.webp?updatedAt=1742417909171)
 
 This is a work in progress which might change in the future.
 
