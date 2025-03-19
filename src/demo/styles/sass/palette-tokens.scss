@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use './data';
+
+@mixin tokens($hue, $color-name, $chroma-type) {
+  $lightness: data.$lightness-min-value;
+
+  $color-space: '';
+  $chroma-value-string: '';
+  $chroma-token-string: '';
+
+  @if ($chroma-type == 'rc') {
+    $color-space: data.$color-space;
+    $chroma-value-string: #{data.$relative-chroma} + '%';
+    $chroma-token-string: #{$chroma-type}#{data.$relative-chroma};
+  } @else if ($chroma-type == 'ac') {
+    // prettier-ignore
+    $chroma-value-string: #{data.$absolute-chroma};
+    $chroma-token-string: #{$chroma-type}#{data.$absolute-chroma-string};
+  }
+
+  // prettier-ignore
+  --b__color__#{$color-name}__#{$chroma-token-string}__5: oklch(#{$color-space} 5% #{$chroma-value-string} #{$hue});
+
+  @while $lightness <= data.$lightness-max-value {
+    // prettier-ignore
+    --b__color__#{$color-name}__#{$chroma-token-string}__#{$lightness}: oklch(#{$color-space} #{$lightness}% #{$chroma-value-string} #{$hue});
+    $lightness: $lightness + data.$lightness-steps;
+  }
+
+  // prettier-ignore
+  --b__color__#{$color-name}__#{$chroma-token-string}__95: oklch(#{$color-space} 95% #{$chroma-value-string} #{$hue});
+}
+
+:root {
+  @each $hue, $color-name in data.$color-names {
+    @include tokens($hue, $color-name, 'rc');
+  }
+
+  @each $hue, $color-name in data.$color-names {
+    @include tokens($hue, $color-name, 'ac');
+  }
+}

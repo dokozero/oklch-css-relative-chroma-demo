@@ -5,13 +5,17 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "sass-build": "sass --no-source-map ./src/demo/css/sass/main.scss ./src/demo/css/css-relative-chroma/main.css",
-    "postcss-build": "pnpm exec postcss ./src/demo/css/css-relative-chroma/main.css -o ./src/demo/css/css-absolute-chroma/main.css",
+    "sass-build": "sass --no-source-map ./src/demo/styles/sass/main.scss ./src/demo/styles/css-relative-chroma/main.css",
+    "postcss-build": "pnpm exec postcss ./src/demo/styles/css-relative-chroma/main.css -o ./src/demo/styles/css-absolute-chroma/main.css",
     "all-css-build": "pnpm sass-build && pnpm postcss-build",
-    "all-css-watch": "nodemon --watch ./src/demo/css/sass/ --ext scss --exec pnpm all-css-build",
-    "build": "./build.zsh"
+    "all-css-watch": "nodemon --watch ./src/demo/styles/sass/ --ext scss --exec pnpm all-css-build",
+    "dev": "vite",
+    "build": "./build.zsh",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "culori": "^4.0.1"
   },
   "devDependencies": {
@@ -19,6 +23,17 @@
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3",
-    "sass": "^1.85.1"
+    "sass": "^1.86.0",
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^19.0.11",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.2.2"
   }
 }

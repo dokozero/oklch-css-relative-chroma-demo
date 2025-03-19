@@ -87,7 +87,7 @@ Of course, here we could still use the same absolute chroma value for the varian
 
 ## Limitations
 
-On the demo file, you can see that on some palettes, there is one color that seems to be a bit too vivid, although barely noticeable. This is the case when the relative chroma is around 90-100 %.
+On the demo file, you can see that on some palettes, there is one color that seems to be a bit too vivid, although barely noticeable. This is mostly the case in P3 and when the relative chroma is around 90-100 %.
 
 However, this is because we see it in relation to all the other lightness variants in the palette, but in practice, when designing, users never see the palettes like this and is less of a problem.
 
