@@ -1,16 +1,16 @@
 $color-names: (
-  10: 'red',
-  40: 'orange',
-  70: 'amber',
+  20: 'red',
+  50: 'orange',
   100: 'yellow',
   130: 'lime',
-  160: 'teal',
+  145: 'green',
+  165: 'teal',
   190: 'cyan',
   220: 'sky',
   250: 'blue',
-  280: 'purple',
-  310: 'fuchsia',
-  340: 'pink'
+  290: 'violet',
+  320: 'purple',
+  350: 'pink'
 );
 
 // 'srgb' | 'display-p3 | 'rec2020
@@ -18,9 +18,9 @@ $color-space: 'display-p3';
 
 $lightness-steps: 10;
 $lightness-min-value: 10;
-$lightness-max-value: 95;
+$lightness-max-value: 90;
 
-$relative-chroma: 100;
+$relative-chroma: 90;
 $absolute-chroma: 0.37;
 
 // To use in the design token name.

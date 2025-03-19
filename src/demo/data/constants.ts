@@ -1,23 +1,23 @@
 export const COLOR_NAMES = new Map([
-  [10, 'red'],
-  [40, 'orange'],
-  [70, 'amber'],
+  [20, 'red'],
+  [50, 'orange'],
   [100, 'yellow'],
   [130, 'lime'],
-  [160, 'teal'],
+  [145, 'green'],
+  [165, 'teal'],
   [190, 'cyan'],
   [220, 'sky'],
   [250, 'blue'],
-  [280, 'purple'],
-  [310, 'fuchsia'],
-  [340, 'pink']
+  [290, 'violet'],
+  [320, 'purple'],
+  [350, 'pink']
 ])
 
 export const COLOR_SPACE = 'display-p3'
 
 export const LIGHTNESS_STEPS = 10
 export const LIGHTNESS_MIN_VALUE = 10
-export const LIGHTNESS_MAX_VALUE = 95
+export const LIGHTNESS_MAX_VALUE = 90
 
-export const RELATIVE_CHROMA = 100
+export const RELATIVE_CHROMA = 90
 export const ABSOLUTE_CHROMA = 0.37

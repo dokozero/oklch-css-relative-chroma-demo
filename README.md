@@ -2,7 +2,11 @@
 
 This repo holds the documentation for the proposal of an upgraded `oklch()` notation with a relative chroma feature.
 
-It uses the PostCSS plugin [postcss-oklch-relative-chroma](https://github.com/dokozero/postcss-oklch-relative-chroma). Clone and open index.html in the dist folder to see the results.
+It uses the PostCSS plugin [postcss-oklch-relative-chroma](https://github.com/dokozero/postcss-oklch-relative-chroma).
+
+Clone and run `npm run preview` or `pnpm preview` to see the results:
+
+![Palettes from the demo.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/demo.webp?updatedAt=1742417220300)
 
 This is a work in progress which might change in the future.
 
@@ -61,7 +65,7 @@ Note that currently, we can indeed use `oklch(80% 100% 20)` for example, but her
 
 ## Use cases
 
-With this new feature, we can now easily create color palettes on the fly, which are uniform and consistent, without leaving CSS.
+With this new feature, we can now easily create lightness variants on the fly, which are uniform and consistent, without leaving CSS.
 
 For example, if we start from a base color of `oklch(display-p3 50% 100% 135)`, we just have to change the lightness value, and the model will automatically get the right absolute chroma behind, without the need to manually define it ourselves.
 
@@ -75,7 +79,7 @@ If we tried to use the same absolute chroma value for all lightness variants, we
 
 ![Two color palettes, first with fixed relative chroma, second with fixed absolute chroma.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/fixed-absolute-chroma-palette.webp?updatedAt=1742115531207)
 
-For more examples of this, you can see the demo file in the dist folder which has more palettes with fixed absolute chroma values.
+For more examples of this, you can see the demo in the dist folder which has more palettes with fixed absolute chroma values.
 
 Note that even if we clip only the chroma, using a fixed relative chroma for the palette is better because with a fixed absolute chroma, some lightness variants would have the same chroma value and some different ones, which leads to inconsistent palettes.
 
@@ -85,37 +89,39 @@ Now for some practical examples, we can then easily create lightness variants on
 
 Of course, here we could still use the same absolute chroma value for the variants, but for consistency sake and depending on the color we start from, we could be out of gamut and have unwanted lightness and hue shifts.
 
-## Limitations
-
-On the demo file, you can see that on some palettes, there is one color that seems to be a bit too vivid, although barely noticeable. This is mostly the case in P3 and when the relative chroma is around 90-100 %.
-
-However, this is because we see it in relation to all the other lightness variants in the palette, but in practice, when designing, users never see the palettes like this and is less of a problem.
-
-In the case we need to create complete palettes before designing, we can manually adjust the relative chroma of this lightness variant if needed.
-
 ## How to modify the demo
 
 - Install the npm dependencies.
-- Modify the constants if you want in the `src/demo/css/sass/data.scss` file.
-- Do the same in the `<script>` tag in `src/demo/index.html` (`LIGHTNESS_STEPS` is enough).
-- Make sure that build.zsh is executable with `chmod +x build.zsh`.
-- Run `npm run build` or `pnpm build`.
-- Open `dist/index.html` in your browser.
+- Run `npm run dev` or `pnpm dev` and open http://localhost:5173/.
+- Modify the constants in `src/demo/styles/sass/constants.scss` file and do the same in `src/demo/data/constants.ts`.
+- Modify the values in `src/demo/styles/sass/manual-palette-tokens.scss` file.
 
-You can also watch the src files with `npm run all-css-watch` or `pnpm all-css-watch` and open index.html from the src folder to see your changes live.
+When you are done, you can update the build with `npm run build` or `pnpm build`, and run `npm run preview` or `pnpm preview` to check the build.
 
-## About the lack of chroma in some palettes
+## Why do some palettes don't blend when displayed together?
 
-As you can see in the demo file, some palettes like the yellow one lack chroma in the dark variants.
+You can see from the demo that some palettes don't blend perfectly together.
+
+For some, there are one or two lightness variants that seem to be a bit too vivid compared to the others. This is mostly the case in P3 and when the relative chroma is around 90-100 %.
+
+However, this is because we see it in relation to all the other lightness variants in the palette, but in practice, when designing, the users never see the palettes like this, and is less of a problem.
+
+You can see it with OkColor plugin or with oklch.com, this is because for some hues like yellow or cyan, their peak chroma (peak of the triangle) is close to white.
+
+This leads to a larger gap between the absolute chroma values between the lightness variants around this peak.
+
+Also, some palettes like the yellow one lack chroma in the dark variants.
 
 This is not a bug from OkLCH but a limitation of our screens and human vision. Compared for example to a blue hue, you can see with OkColor this lack of chroma for the yellow hue:
 
 ![Two palettes, first blue one with good chroma progression, second yellow one with lack of chroma in the dark lightness variants.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-variants.webp?updatedAt=1742115531202)
 
-The solution here is to manually shift the hue of palette's lightness variants by a fixed step:
+The solution here is to manually shift the hue of the palette lightness variants by a fixed step:
 
 ![Two yellow palettes, first with manual hue shifting for more chroma in the dark lightness variants, second without manual hue shifting.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-palette-tints.webp?updatedAt=1742115531135)
 
-But a simpler approach is to use lightness variants from two palettes. For example, the lime palette below could benefit from a hue shift in the dark variants toward green hue, but in practice and if we create lightness variants on the fly, we can simply use two palettes:
+So, in the case we need to create complete palettes that look good together before designing, we can make some manual adjustments. That's what I did for the third palette in the demo with the file `src/demo/styles/sass/manual-palette-tokens.scss`.
+
+But if we don't need to create complete palettes beforehand, a simpler approach is to use lightness variants from two palettes. For example, the lime palette below could benefit from a hue shift in the dark variants toward green hue, but in practice and if we create lightness variants on the fly, we can simply use two palettes:
 
 ![UI Design card example with two palettes.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/two-palettes-harmony.webp?updatedAt=1742115531200)

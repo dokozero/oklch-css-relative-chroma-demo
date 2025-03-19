@@ -6,14 +6,15 @@ import {
   COLOR_SPACE,
   RELATIVE_CHROMA,
   ABSOLUTE_CHROMA
-} from '../../data'
+} from '../../data/constants'
+import { manualPaletteOklchValues } from '../../data/manualPaletteOklchValues'
 
 type Props = {
-  paletteChromaType: 'rc' | 'ac'
+  paletteChromaType: 'rc' | 'ac' | 'manual-rc'
 }
 
 const getLightnessValues = (): number[] => {
-  const lightnessValues = [5]
+  const lightnessValues = []
 
   for (let lightness = LIGHTNESS_MIN_VALUE; lightness <= LIGHTNESS_MAX_VALUE; lightness += LIGHTNESS_STEPS) {
     lightnessValues.push(lightness)
@@ -43,8 +44,13 @@ export default function ColorPalette(props: Props) {
                   {lightness}
                 </b>{' '}
                 <br />
-                oklch({paletteChromaType === 'rc' && `${COLOR_SPACE} `}
-                {lightness}% {paletteChromaType === 'rc' ? `${RELATIVE_CHROMA}%` : ABSOLUTE_CHROMA} {hue})
+                {paletteChromaType !== 'manual-rc' && (
+                  <>
+                    oklch({paletteChromaType === 'rc' && `${COLOR_SPACE} `}
+                    {lightness}% {paletteChromaType === 'rc' ? `${RELATIVE_CHROMA}%` : ABSOLUTE_CHROMA} {hue})
+                  </>
+                )}
+                {paletteChromaType === 'manual-rc' && <>{manualPaletteOklchValues[colorName][lightness]}</>}
               </p>
             </div>
           ))}

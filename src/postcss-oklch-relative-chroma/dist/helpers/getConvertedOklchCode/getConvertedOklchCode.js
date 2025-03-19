@@ -1,4 +1,4 @@
-import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../data.js';
+import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js';
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js';
 export default function getConvertedOklchCode(match, colorSpaceRegularName, lightness, relativeChroma, hue) {
     // We need to convert the color space name to the one used in Culori as they are different from CSS one like in color().

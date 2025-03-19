@@ -1,30 +1,26 @@
 @use 'sass:map';
-@use './data';
+@use './constants';
 
 @mixin tokens($hue, $color-name, $chroma-type) {
-  $lightness: data.$lightness-min-value;
+  $lightness: constants.$lightness-min-value;
 
   $color-space: '';
   $chroma-value-string: '';
   $chroma-token-string: '';
 
   @if ($chroma-type == 'rc') {
-    $color-space: data.$color-space;
-    $chroma-value-string: #{data.$relative-chroma} + '%';
-    $chroma-token-string: #{$chroma-type}#{data.$relative-chroma};
+    $color-space: constants.$color-space;
+    $chroma-value-string: #{constants.$relative-chroma} + '%';
+    $chroma-token-string: #{$chroma-type}#{constants.$relative-chroma};
   } @else if ($chroma-type == 'ac') {
-    // prettier-ignore
-    $chroma-value-string: #{data.$absolute-chroma};
-    $chroma-token-string: #{$chroma-type}#{data.$absolute-chroma-string};
+    $chroma-value-string: #{constants.$absolute-chroma};
+    $chroma-token-string: #{$chroma-type}#{constants.$absolute-chroma-string};
   }
 
-  // prettier-ignore
-  --b__color__#{$color-name}__#{$chroma-token-string}__5: oklch(#{$color-space} 5% #{$chroma-value-string} #{$hue});
-
-  @while $lightness <= data.$lightness-max-value {
+  @while $lightness <= constants.$lightness-max-value {
     // prettier-ignore
     --b__color__#{$color-name}__#{$chroma-token-string}__#{$lightness}: oklch(#{$color-space} #{$lightness}% #{$chroma-value-string} #{$hue});
-    $lightness: $lightness + data.$lightness-steps;
+    $lightness: $lightness + constants.$lightness-steps;
   }
 
   // prettier-ignore
@@ -32,11 +28,11 @@
 }
 
 :root {
-  @each $hue, $color-name in data.$color-names {
+  @each $hue, $color-name in constants.$color-names {
     @include tokens($hue, $color-name, 'rc');
   }
 
-  @each $hue, $color-name in data.$color-names {
+  @each $hue, $color-name in constants.$color-names {
     @include tokens($hue, $color-name, 'ac');
   }
 }

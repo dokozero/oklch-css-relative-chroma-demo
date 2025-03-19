@@ -1,5 +1,6 @@
 @use 'sass:map';
-@use './data';
+@use './constants';
+@use './manual-palette-tokens';
 @use './palette-tokens';
 
 html {
@@ -21,6 +22,7 @@ h2 {
 }
 
 p {
+  max-width: 100rem;
   margin-top: 0;
   margin-bottom: 1.2rem;
 
@@ -36,13 +38,13 @@ p {
 
 .s-container {
   width: min-content;
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .c-color-palettes-container {
   display: grid;
   justify-items: center;
-  gap: 3.2rem;
+  gap: 3.6rem;
 }
 
 .c-color-palette {
@@ -52,14 +54,15 @@ p {
 }
 
 .c-color-palette__lightness-variant {
-  width: 21.5rem;
+  width: 22rem;
   height: 6rem;
   border-radius: 1rem;
 }
 
 .c-color-palette__color-code {
   margin-top: 0.6rem;
-  font-size: 1.3rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
 }
 
 .u-mb-10 {
@@ -67,28 +70,24 @@ p {
 }
 
 @mixin tokens($color-name, $chroma-type) {
-  $lightness: data.$lightness-min-value;
+  $lightness: constants.$lightness-min-value;
 
   $chroma-token-string: '';
 
   @if ($chroma-type == 'rc') {
     // prettier-ignore
-    $chroma-token-string: #{$chroma-type}#{data.$relative-chroma};
+    $chroma-token-string: #{$chroma-type}#{constants.$relative-chroma};
   } @else if ($chroma-type == 'ac') {
     // prettier-ignore
-    $chroma-token-string: #{$chroma-type}#{data.$absolute-chroma-string};
+    $chroma-token-string: #{$chroma-type}#{constants.$absolute-chroma-string};
   }
 
-  .c-color-palette__lightness-variant--#{$chroma-type}-#{$color-name}5 {
-    background-color: var(--b__color__#{$color-name}__#{$chroma-token-string}__5);
-  }
-
-  @while $lightness <= data.$lightness-max-value {
+  @while $lightness <= constants.$lightness-max-value {
     .c-color-palette__lightness-variant--#{$chroma-type}-#{$color-name}#{$lightness} {
       background-color: var(--b__color__#{$color-name}__#{$chroma-token-string}__#{$lightness});
     }
 
-    $lightness: $lightness + data.$lightness-steps;
+    $lightness: $lightness + constants.$lightness-steps;
   }
 
   .c-color-palette__lightness-variant--#{$chroma-type}-#{$color-name}95 {
@@ -96,12 +95,10 @@ p {
   }
 }
 
-:root {
-  @each $hue, $color-name in data.$color-names {
-    @include tokens($color-name, 'rc');
-  }
+@each $hue, $color-name in constants.$color-names {
+  @include tokens($color-name, 'rc');
+}
 
-  @each $hue, $color-name in data.$color-names {
-    @include tokens($color-name, 'ac');
-  }
+@each $hue, $color-name in constants.$color-names {
+  @include tokens($color-name, 'ac');
 }
