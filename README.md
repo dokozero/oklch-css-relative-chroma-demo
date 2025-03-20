@@ -118,7 +118,7 @@ This is not a bug from OkLCH but a limitation of our screens and human vision. C
 
 The solution here is to manually shift the hue of the palette lightness variants by a fixed step:
 
-![Two yellow palettes, first with manual hue shifting for more chroma in the dark lightness variants, second without manual hue shifting.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-palette-tints.webp?updatedAt=1742115531135)
+![Two yellow palettes, first with manual hue shifting for more chroma in the dark lightness variants, second without manual hue shifting.](https://ik.imagekit.io/cgavlsdta/tr:cp-true/oklch-css-relative-chroma-documentation/weak-chroma-palette-tints.webp?updatedAt=1742461831816)
 
 So, in the case we need to create complete palettes that look good together before designing, we can make some manual adjustments. That's what I did for the third palette in the demo with the file `src/demo/styles/sass/manual-palette-tokens.scss`.
 
