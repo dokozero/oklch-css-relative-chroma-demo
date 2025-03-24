@@ -1,5 +1,6 @@
 import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js';
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js';
+import getClampedLrch from '../getClampedLrch/getClampedLrch.js';
 export default function getConvertedOklchCode(match, colorSpaceRegularName, lightness, relativeChroma, hue) {
     // We need to convert the color space name to the one used in Culori as they are different from CSS one like in color().
     const colorSpaceCuloriName = COLOR_SPACE_CULORI_NAME_MAPPING[colorSpaceRegularName];
@@ -8,10 +9,14 @@ export default function getConvertedOklchCode(match, colorSpaceRegularName, ligh
         console.error(`Invalid color space: '${colorSpaceRegularName}', supported color spaces are: ${Object.keys(COLOR_SPACE_CULORI_NAME_MAPPING).join(', ')}`);
         return match;
     }
+    // In case some values are outside their range.
+    const clampedLrch = getClampedLrch({
+        l: parseFloat(lightness),
+        rc: parseFloat(relativeChroma),
+        h: parseFloat(hue)
+    });
     const absoluteChroma = convertRelativeChromaToAbsolute({
-        lightness: parseFloat(lightness),
-        relativeChroma: parseFloat(relativeChroma),
-        hue: parseFloat(hue),
+        lrch: clampedLrch,
         colorSpace: colorSpaceCuloriName
     });
     const convertedOklchCode = `oklch(${lightness}% ${absoluteChroma} ${hue})`;
