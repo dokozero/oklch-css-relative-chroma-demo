@@ -17,9 +17,8 @@ To see relative chroma in action visually, you can use the [OkColor Figma plugin
 - [Motivation](#motivation)
 - [Proposal](#proposal)
 - [Use cases](#use-cases)
-- [Limitations](#limitations)
 - [How to modify the demo](#how-to-modify-the-demo)
-- [About the lack of chroma in some palettes](#about-the-lack-of-chroma-in-some-palettes)
+- [How to make all palettes blend smoothly?](#how-to-make-all-palettes-blend-smoothly)
 
 ## Motivation
 
@@ -98,7 +97,7 @@ Of course, here we could still use the same absolute chroma value for the varian
 
 When you are done, you can update the build with `npm run build` or `pnpm build`, and run `npm run preview` or `pnpm preview` to check the build.
 
-## Why do some palettes don't blend when displayed together?
+## How to make all palettes blend smoothly?
 
 You can see from the demo that some palettes don't blend perfectly together.
 
