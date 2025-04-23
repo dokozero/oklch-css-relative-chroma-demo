@@ -30,37 +30,37 @@ For example, `oklch(80% 0.37 20)` is [out of gamut](https://oklch.com/#80,0.37,2
 
 Check this Codepen for more examples: [OkLCH gamut clipping tests](https://codepen.io/dokozero/full/pvoPpdg).
 
-Wouldn't it be great if from `oklch()`, we could somehow say: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 space".
+Wouldn't it be great if from `oklch()`, we could somehow say: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 gamut".
 
 ## Proposal
 
-From the current `oklch()` notation, the idea is to add support for a relative chroma value like this `oklch(display-p3 80% 100% 20)`. This is similar to `color(colorspace c1 c2 c3)` notation used to define RGB colors in relation to a `colorspace` value.
+From the current `oklch()` notation, the idea is to add support for a relative chroma value like this `oklch(display-p3 80% 100% 20)`. This is similar to `color(gamut c1 c2 c3)` notation used to define RGB colors in relation to a `gamut` value.
 
-But why not simply `oklch(80% 100% 20)`? In that case, we are missing something, indeed, with an absolute chroma value like 0.24, we don't need to specify in which color space we want to be, but with a relative value, yes.
+But why not simply `oklch(80% 100% 20)`? In that case, we are missing something, indeed, with an absolute chroma value like 0.24, we don't need to specify in which gamut we want to be, but with a relative value, yes.
 
-In fact, with models like `hsl()` or `rgb()`, we also have relative values, but we can't specify to which color space they are relative, that's because with them, in a CSS context, **they are always relative to the sRGB space.**
+In fact, with models like `hsl()` or `rgb()`, we also have relative values, but we can't specify to which gamut they are relative, that's because with them, in a CSS context, **they are always relative to the sRGB gamut.**
 
-So, with `oklch(80% 100% 20)`, to which space is 100 % relative to? We need this information to get the right absolute chroma value.
+So, with `oklch(80% 100% 20)`, to which gamut is 100 % relative to? We need this information to get the right absolute chroma value.
 
-RGB `color()` notation already solves this, by having a `colorspace` property.
+RGB `color()` notation already solves this, by having a `gamut` property.
 
 So the idea is to have the same here, which gives us the following syntax:
 
 ```markdown
-oklch(colorspace L RC H)
+oklch(gamut L RC H)
 ```
 
-With this upgraded notation, we easily stay within the color space bounds we want to work in.
+With this upgraded notation, we easily stay within the gamut bounds we want to work in.
 
-We can think of it as **an improved HSL color model,** which is uniform and allows us to pick colors in larger color spaces than sRGB.
+We can think of it as **an improved HSL color model,** which is uniform and allows us to pick colors in larger color gamuts than sRGB.
 
-`colorspace` can either be `srgb`, `display-p3` or `rec2020` (and more in theory, but for now, the [PostCSS plugin](https://github.com/dokozero/postcss-oklch-relative-chroma) supports these only).
+`gamut` can either be `srgb`, `display-p3` or `rec2020` (and more in theory, but for now, the [PostCSS plugin](https://github.com/dokozero/postcss-oklch-relative-chroma) supports these only).
 
-From there, `oklch(display-p3 80% 100% 20)` has to be read as: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 space", which gives us `oklch(80% 0.148 20)`.
+From there, `oklch(display-p3 80% 100% 20)` has to be read as: "for a lightness of 80 % and a hue of 20, I want a color with the maximum chroma possible in the P3 gamut", which gives us `oklch(80% 0.148 20)`.
 
-Another example, `oklch(srgb 40% 80% 140)` has to be read as: "for a lightness of 40 % and a hue of 140, I want a color with 80 % of the maximum chroma possible in the sRGB space", which gives us `oklch(40% 0.103 140)`.
+Another example, `oklch(srgb 40% 80% 140)` has to be read as: "for a lightness of 40 % and a hue of 140, I want a color with 80 % of the maximum chroma possible in the sRGB gamut", which gives us `oklch(40% 0.103 140)`.
 
-Note that currently, we can indeed use `oklch(80% 100% 20)` for example, but here 100 % always means 0.4 ([source](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch)) which is **not useful for our purpose** as the value is always relative to 0.4 and not the bounds of the color space we want to work with.
+Note that currently, we can indeed use `oklch(80% 100% 20)` for example, but here 100 % always means 0.4 ([source](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch)) which is **not useful for our purpose** as the value is always relative to 0.4 and not the bounds of the gamut we want to work with.
 
 ## Use cases
 

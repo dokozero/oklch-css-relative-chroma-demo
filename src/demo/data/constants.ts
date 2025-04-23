@@ -13,7 +13,7 @@ export const COLOR_NAMES = new Map([
   [350, 'pink']
 ])
 
-export const COLOR_SPACE = 'display-p3'
+export const GAMUT = 'display-p3'
 
 export const LIGHTNESS_STEPS = 10
 export const LIGHTNESS_MIN_VALUE = 10

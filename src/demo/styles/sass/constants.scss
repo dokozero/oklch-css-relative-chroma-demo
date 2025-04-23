@@ -14,7 +14,7 @@ $color-names: (
 );
 
 // 'srgb' | 'display-p3 | 'rec2020
-$color-space: 'display-p3';
+$gamut: 'display-p3';
 
 $lightness-steps: 10;
 $lightness-min-value: 10;

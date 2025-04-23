@@ -7,8 +7,8 @@ const App = () => {
       <div className="s-container">
         <h2>✅ Relative chroma palettes</h2>
         <p className="u-mb-10">
-          The palette's colors are made with the new notation: oklch(colorspace L RC H), where RC is a relative chroma. You can
-          see that we got nice results compared to the next example with a fixed absolute chroma value for all lightness variants.
+          The palette's colors are made with the new notation: oklch(gamut L RC H), where RC is a relative chroma. You can see
+          that we got nice results compared to the next example with a fixed absolute chroma value for all lightness variants.
         </p>
         <ColorPalette paletteChromaType="rc" />
       </div>

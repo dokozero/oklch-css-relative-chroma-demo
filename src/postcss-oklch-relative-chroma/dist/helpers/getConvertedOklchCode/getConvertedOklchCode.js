@@ -1,12 +1,12 @@
-import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js';
+import { GAMUT_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js';
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js';
 import getClampedLrch from '../getClampedLrch/getClampedLrch.js';
-export default function getConvertedOklchCode(match, colorSpaceRegularName, lightness, relativeChroma, hue) {
-    // We need to convert the color space name to the one used in Culori as they are different from CSS one like in color().
-    const colorSpaceCuloriName = COLOR_SPACE_CULORI_NAME_MAPPING[colorSpaceRegularName];
-    // If colorSpace value is not in COLOR_SPACE_CULORI_NAME_MAPPING we get and undefined value.
-    if (colorSpaceCuloriName === undefined) {
-        console.error(`Invalid color space: '${colorSpaceRegularName}', supported color spaces are: ${Object.keys(COLOR_SPACE_CULORI_NAME_MAPPING).join(', ')}`);
+export default function getConvertedOklchCode(match, gamutRegularName, lightness, relativeChroma, hue) {
+    // We need to convert the gamut name to the one used in Culori as they are different from CSS one like in color().
+    const gamutCuloriName = GAMUT_CULORI_NAME_MAPPING[gamutRegularName];
+    // If gamut value is not in GAMUT_CULORI_NAME_MAPPING we get and undefined value.
+    if (gamutCuloriName === undefined) {
+        console.error(`Invalid gamut: '${gamutRegularName}', supported gamuts are: ${Object.keys(GAMUT_CULORI_NAME_MAPPING).join(', ')}`);
         return match;
     }
     // In case some values are outside their range.
@@ -17,7 +17,7 @@ export default function getConvertedOklchCode(match, colorSpaceRegularName, ligh
     });
     const absoluteChroma = convertRelativeChromaToAbsolute({
         lrch: clampedLrch,
-        colorSpace: colorSpaceCuloriName
+        gamut: gamutCuloriName
     });
     const convertedOklchCode = `oklch(${lightness}% ${absoluteChroma} ${hue})`;
     if (DEBUG) {

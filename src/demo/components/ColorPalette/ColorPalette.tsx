@@ -3,7 +3,7 @@ import {
   LIGHTNESS_MAX_VALUE,
   LIGHTNESS_STEPS,
   COLOR_NAMES,
-  COLOR_SPACE,
+  GAMUT,
   RELATIVE_CHROMA,
   ABSOLUTE_CHROMA
 } from '../../data/constants'
@@ -46,7 +46,7 @@ export default function ColorPalette(props: Props) {
                 <br />
                 {paletteChromaType !== 'manual-rc' && (
                   <>
-                    oklch({paletteChromaType === 'rc' && `${COLOR_SPACE} `}
+                    oklch({paletteChromaType === 'rc' && `${GAMUT} `}
                     {lightness}% {paletteChromaType === 'rc' ? `${RELATIVE_CHROMA}%` : ABSOLUTE_CHROMA} {hue})
                   </>
                 )}

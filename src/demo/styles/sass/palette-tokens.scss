@@ -4,12 +4,12 @@
 @mixin tokens($hue, $color-name, $chroma-type) {
   $lightness: constants.$lightness-min-value;
 
-  $color-space: '';
+  $gamut: '';
   $chroma-value-string: '';
   $chroma-token-string: '';
 
   @if ($chroma-type == 'rc') {
-    $color-space: constants.$color-space;
+    $gamut: constants.$gamut;
     $chroma-value-string: #{constants.$relative-chroma} + '%';
     $chroma-token-string: #{$chroma-type}#{constants.$relative-chroma};
   } @else if ($chroma-type == 'ac') {
@@ -19,12 +19,12 @@
 
   @while $lightness <= constants.$lightness-max-value {
     // prettier-ignore
-    --b__color__#{$color-name}__#{$chroma-token-string}__#{$lightness}: oklch(#{$color-space} #{$lightness}% #{$chroma-value-string} #{$hue});
+    --b__color__#{$color-name}__#{$chroma-token-string}__#{$lightness}: oklch(#{$gamut} #{$lightness}% #{$chroma-value-string} #{$hue});
     $lightness: $lightness + constants.$lightness-steps;
   }
 
   // prettier-ignore
-  --b__color__#{$color-name}__#{$chroma-token-string}__95: oklch(#{$color-space} 95% #{$chroma-value-string} #{$hue});
+  --b__color__#{$color-name}__#{$chroma-token-string}__95: oklch(#{$gamut} 95% #{$chroma-value-string} #{$hue});
 }
 
 :root {
