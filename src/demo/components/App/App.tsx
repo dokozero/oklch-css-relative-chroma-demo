@@ -4,7 +4,26 @@ import '../../styles/css-absolute-chroma/main.css'
 const App = () => {
   return (
     <div className="s-section">
-      <div className="s-container">
+      <div className="s-container u-pt-0">
+        <h1>OkLCH CSS relative chroma demo</h1>
+
+        <p>
+          Demo file for the{' '}
+          <a href="https://github.com/dokozero/postcss-oklch-relative-chroma" rel="noreferrer" target="_blank">
+            PostCSS OkLCH relative chroma plugin
+          </a>
+          .
+        </p>
+
+        <p className="u-mb-10">
+          Check{' '}
+          <a href="https://github.com/dokozero/oklch-css-relative-chroma-demo" rel="noreferrer" target="_blank">
+            {' '}
+            the demo repo{' '}
+          </a>{' '}
+          to modify it.
+        </p>
+
         <h2>✅ Relative chroma palettes</h2>
         <p className="u-mb-10">
           The palette's colors are made with the new notation: oklch(gamut L RC H), where RC is a relative chroma. You can see

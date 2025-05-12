@@ -850,9 +850,16 @@ html {
 
 body {
   margin: 0;
-  padding: 4rem 1.2rem;
+  padding: 6rem 3rem;
   font-family: "Inter", sans-serif;
   display: grid;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3.8rem;
+  color: oklch(10% 0 0deg);
 }
 
 h2 {
@@ -900,13 +907,22 @@ p {
 }
 
 .c-color-palette__color-code {
-  margin-top: 0.6rem;
+  margin-top: 1.2rem;
   margin-bottom: 0;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  line-height: 1.45;
+}
+.c-color-palette__color-code b {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .u-mb-10 {
   margin-bottom: 4rem;
+}
+
+.u-pt-0 {
+  padding-top: 0;
 }
 
 .c-color-palette__lightness-variant--rc-red10 {
