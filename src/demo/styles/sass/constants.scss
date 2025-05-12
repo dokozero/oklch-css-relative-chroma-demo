@@ -13,8 +13,8 @@ $color-names: (
   350: 'pink'
 );
 
-// 'srgb' | 'display-p3 | 'rec2020
-$gamut: 'display-p3';
+// 'srgb' | 'display-p3 or 'p3' | 'rec2020
+$gamut: 'p3';
 
 $lightness-steps: 10;
 $lightness-min-value: 10;
