@@ -24,7 +24,7 @@ const App = () => {
           to modify it.
         </p>
 
-        <h2>✅ Relative chroma palettes</h2>
+        <h2 id="relative-chroma-palettes">✅ Relative chroma palettes</h2>
         <p className="u-mb-10">
           The palette's colors are made with the new notation: oklch(gamut L RC H), where RC is a relative chroma. You can see
           that we got nice results compared to the next example with a fixed absolute chroma value for all lightness variants.
@@ -33,7 +33,7 @@ const App = () => {
       </div>
 
       <div className="s-container">
-        <h2>⚠️ Absolute chroma palettes</h2>
+        <h2 id="absolute-chroma-palettes">⚠️ Absolute chroma palettes</h2>
         <p className="u-mb-10">
           Here, we use the same absolute chroma value for all lightness variants. You can see that for some colors, because of the
           browser clipping method, we got hue and lightness shifts.
@@ -42,7 +42,9 @@ const App = () => {
       </div>
 
       <div className="s-container">
-        <h2>✅ Relative chroma palettes with manual chroma/hue adjustments</h2>
+        <h2 id="relative-chroma-palettes-with-manual-adjustments">
+          ✅ Relative chroma palettes with manual chroma/hue adjustments
+        </h2>
         <p>
           From the first example, you can see that some lightness variants seem to stand out more. As explained in the readme,
           that's because some hues have a peak chroma close to white.
