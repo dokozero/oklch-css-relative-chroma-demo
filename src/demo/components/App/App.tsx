@@ -1,7 +1,28 @@
 import ColorPalette from '../ColorPalette/ColorPalette'
 import '../../styles/css-absolute-chroma/main.css'
+import { useEffect } from 'react'
 
 const App = () => {
+  useEffect(() => {
+    const scrollToHash = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.replace('#', '')
+        const el = document.getElementById(id)
+        if (el) {
+          el.scrollIntoView()
+        }
+      }
+    }
+
+    // Scroll on mount
+    scrollToHash()
+
+    // Scroll on hash change
+    window.addEventListener('hashchange', scrollToHash)
+
+    return () => window.removeEventListener('hashchange', scrollToHash)
+  }, [])
+
   return (
     <div className="s-section">
       <div className="s-container u-pt-0">
